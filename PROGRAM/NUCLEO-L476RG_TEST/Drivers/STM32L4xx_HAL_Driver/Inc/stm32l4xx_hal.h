@@ -47,6 +47,10 @@
 /* Includes ------------------------------------------------------------------*/
 #include "stm32l4xx_hal_conf.h"
 
+     
+typedef uint32_t  u32;
+typedef uint16_t u16;
+typedef uint8_t  u8;
 /** @addtogroup STM32L4xx_HAL_Driver
   * @{
   */
