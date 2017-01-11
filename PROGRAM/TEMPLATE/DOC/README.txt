@@ -1,0 +1,1 @@
+20170111	1、新建template工程一直报错，重新复制了现成的工程中stm32l4xx_hal_conf.h到USER中，解决问题。
