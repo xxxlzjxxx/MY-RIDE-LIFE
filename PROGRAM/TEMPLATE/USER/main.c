@@ -83,11 +83,10 @@ int main(void)
         switch(key)
         {
             case WKUP_PRES: //控制 LED0,LED1 互斥点亮
-                LED1=!LED1;
-                LED0=!LED1;
+                LED1_Toggle;
                 break;
             case KEY2_PRES: //控制 LED0 翻转
-                LED0=!LED0;
+                LED0_Toggle;
                 break;
 //            case KEY1_PRES: //控制 LED1 翻转
 //                LED1=!LED1;

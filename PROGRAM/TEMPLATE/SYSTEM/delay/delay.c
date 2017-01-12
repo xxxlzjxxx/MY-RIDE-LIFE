@@ -197,39 +197,6 @@ void delay_ms(u16 nms)
 	for(i=0;i<nms;i++) delay_us(1000);
 }
 #endif
-			 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			
 
 

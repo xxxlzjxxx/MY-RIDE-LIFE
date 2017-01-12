@@ -13,8 +13,11 @@
 //Copyright(C) 广州市星翼电子科技有限公司 2009-2019
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 
-#define LED0 PAout(5)	// PA5
-#define LED1 PAout(6)	// PA6	
+//#define LED0 PAout(5)	// PA5
+//#define LED1 PAout(6)	// PA6	
+
+#define LED0_Toggle HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5) 	// PA5
+#define LED1_Toggle HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_6)	// PA6	
 
 void LED_Init(void);//初始化
 
