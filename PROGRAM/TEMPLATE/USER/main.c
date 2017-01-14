@@ -55,13 +55,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
-void Delay(__IO uint32_t nCount);
 
-/* Private functions ---------------------------------------------------------*/
-void Delay(__IO uint32_t nCount)
-{
-    while(nCount--){}
-}
 /**
   * @brief  Main program
   * @param  None
@@ -69,34 +63,39 @@ void Delay(__IO uint32_t nCount)
   */
 int main(void)
 {
-    u8 key;
+    u8 len;
+    uint8_t temp[10]={0x01};
+    u16 times=0;
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 80 MHz */
     SystemClock_Config(1, 20, 2, 1, 4);
     delay_init(80); //初始化延时函数
-//    uart_init(115200); //初始化 USART
+    uart_init(115200); //初始化 USART
     LED_Init(); //初始化 LED
     KEY_Init(); //初始化按键
     while(1)
     {
-        key=KEY_Scan(0); //按键扫描
-        switch(key)
-        {
-            case WKUP_PRES: //控制 LED0,LED1 互斥点亮
-                LED1_Toggle;
-                break;
-            case KEY2_PRES: //控制 LED0 翻转
-                LED0_Toggle;
-                break;
-//            case KEY1_PRES: //控制 LED1 翻转
-//                LED1=!LED1;
-//                break;
-//            case KEY0_PRES: //同时控制 LED0,LED1 翻转
-//                LED0=!LED0;
-//                LED1=!LED1;
-//                break;
-        }
-        delay_ms(10);
+       if(USART_RX_STA&0x8000)
+		{					   
+			len=USART_RX_STA&0x3fff;//得到此次接收到的数据长度
+			printf("\r\n您发送的消息为:\r\n");
+			HAL_UART_Transmit(&UART2_Handler,(uint8_t*)USART_RX_BUF,len,1000);	//发送接收到的数据
+			while(__HAL_UART_GET_FLAG(&UART2_Handler,UART_FLAG_TC)!=SET);		//等待发送结束
+			printf("\r\n\r\n");//插入换行
+			USART_RX_STA=0;
+		}else
+		{
+			times++;
+			if(times%5000==0)
+			{
+                HAL_UART_Transmit(&UART2_Handler, temp, len, 1000);
+				printf("\r\nALIENTEK 阿波罗STM32F429开发板 串口实验\r\n");
+				printf("正点原子@ALIENTEK\r\n\r\n\r\n");
+			}
+			if(times%200==0)printf("请输入数据,以回车键结束\r\n");  
+			if(times%30==0)LED0_Toggle;//闪烁LED,提示系统正在运行.
+			delay_ms(10);   
+		} 
     }
 } 
 /**
