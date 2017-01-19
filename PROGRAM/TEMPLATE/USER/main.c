@@ -54,6 +54,8 @@
 /* Private macro -------------------------------------------------------------*/
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
+extern UART_HandleTypeDef UART2_Handler; //UART句柄
+
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
 
 /**
@@ -68,13 +70,15 @@ int main(void)
     u16 times=0;
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 80 MHz */
-    SystemClock_Config(1, 20, 2, 1, 4);
+    SystemClock_Config(1, 20, 2, 7, 2);
     delay_init(80); //初始化延时函数
     uart_init(115200); //初始化 USART
     LED_Init(); //初始化 LED
-    KEY_Init(); //初始化按键
+//    KEY_Init(); //初始化按键
     while(1)
     {
+//        LED0_Toggle;
+//        delay_ms(1000);
        if(USART_RX_STA&0x8000)
 		{					   
 			len=USART_RX_STA&0x3fff;//得到此次接收到的数据长度
@@ -108,17 +112,17 @@ int main(void)
   *            APB1 Prescaler                 = 1
   *            APB2 Prescaler                 = 1
   *            HSE Frequency(Hz)              = 8000000
-  *            PLL_M                          = 8
-  *            PLL_N                          = 80
+  *            PLL_M                          = 1
+  *            PLL_N                          = 20
   *            PLL_R                          = 2
-  *            PLL_P                          = 1
-  *            PLL_Q                          = 4
+  *            PLL_P                          = 7
+  *            PLL_Q                          = 2
   *            Flash Latency(WS)              = 4
   * @param  None
   * @retval None
   */
 //void Stm32_Clock_Init(u32 plln,u32 pllm,u32 pllp,u32 pllq)
-void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq)
+void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
 {
     HAL_StatusTypeDef ret = HAL_OK;
     RCC_ClkInitTypeDef RCC_ClkInitStruct;
