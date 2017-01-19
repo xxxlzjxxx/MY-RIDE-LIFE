@@ -41,6 +41,7 @@
 #include "usart.h"
 #include "led.h"
 #include "key.h"
+#include "exti.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -75,31 +76,11 @@ int main(void)
     uart_init(115200); //初始化 USART
     LED_Init(); //初始化 LED
 //    KEY_Init(); //初始化按键
+    EXTI_Init();                    //外部中断初始化
     while(1)
     {
-//        LED0_Toggle;
-//        delay_ms(1000);
-       if(USART_RX_STA&0x8000)
-		{					   
-			len=USART_RX_STA&0x3fff;//得到此次接收到的数据长度
-			printf("\r\n您发送的消息为:\r\n");
-			HAL_UART_Transmit(&UART2_Handler,(uint8_t*)USART_RX_BUF,len,1000);	//发送接收到的数据
-			while(__HAL_UART_GET_FLAG(&UART2_Handler,UART_FLAG_TC)!=SET);		//等待发送结束
-			printf("\r\n\r\n");//插入换行
-			USART_RX_STA=0;
-		}else
-		{
-			times++;
-			if(times%5000==0)
-			{
-                HAL_UART_Transmit(&UART2_Handler, temp, len, 1000);
-				printf("\r\nALIENTEK 阿波罗STM32F429开发板 串口实验\r\n");
-				printf("正点原子@ALIENTEK\r\n\r\n\r\n");
-			}
-			if(times%200==0)printf("请输入数据,以回车键结束\r\n");  
-			if(times%30==0)LED0_Toggle;//闪烁LED,提示系统正在运行.
-			delay_ms(10);   
-		} 
+        printf("OK\r\n");           //打印OK提示程序运行
+        delay_ms(1000);             //每隔1s打印一次 
     }
 } 
 /**
