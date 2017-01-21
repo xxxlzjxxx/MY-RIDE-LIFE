@@ -41,8 +41,7 @@
 #include "usart.h"
 #include "led.h"
 #include "key.h"
-#include "exti.h"
-#include "timer.h"
+#include "usmart.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -57,7 +56,26 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
-
+//LED状态设置函数
+void led_set(u8 sta)
+{
+	switch(sta)
+    {
+        case 0:
+            LED0_OFF;
+            break;
+        case 1:
+            LED0_ON;
+            break;
+        default:
+            break;
+    }
+} 
+//函数参数调用测试函数
+void test_fun(void(*ledset)(u8),u8 sta)
+{
+	ledset(sta);
+} 
 /**
   * @brief  Main program
   * @param  None
@@ -65,34 +83,17 @@ void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
   */
 int main(void)
 {
-	u8 dir=1;
-    u16 led0pwmval=0;
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 80 MHz */
     SystemClock_Config(1, 20, 2, 7, 2);
     delay_init(80);                //初始化延时函数
     uart_init(115200);              //初始化USART
+    usmart_dev.init(80); 		    //初始化USMART
     LED_Init();                     //初始化LED 
-    TIM3_PWM_Init(5000-1,80-1);      //80M/80=1M的计数频率，自动重装载为500，那么PWM频率为1M/5000=200HZ
     while(1)
     {
-		delay_ms(10);	 	
-		if(dir)
-		{
-			led0pwmval++;				//dir==1 led0pwmval递增
-		}
-		else led0pwmval--;				//dir==0 led0pwmval递减 
-		if(led0pwmval>3000)
-		{
-			dir=0;			//led0pwmval到达300后，方向为递减
-			printf("-- upcount");
-		}
-		if(led0pwmval==0)
-		{
-			dir=1;			//led0pwmval递减到0后，方向改为递增
-			printf("++ upcount");
-		}
-		TIM_SetTIM3Compare4(led0pwmval);	//修改比较值，修改占空比
+		printf(">>OK.");
+        delay_ms(1000);
     }
 } 
 /**

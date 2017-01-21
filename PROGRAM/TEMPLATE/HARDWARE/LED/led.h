@@ -16,8 +16,10 @@
 //#define LED0 PAout(5)	// PA5
 //#define LED1 PAout(6)	// PA6	
 
-#define LED0_Toggle HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5) 	// PA5
-#define LED1_Toggle HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_6)	// PA6	
+#define LED0_Toggle     HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_5) 	// PA5
+#define LED0_ON         HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET) 	// PA5
+#define LED0_OFF        HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET) 	// PA5
+#define LED1_Toggle     HAL_GPIO_TogglePin(GPIOA,GPIO_PIN_6)	// PA6	
 
 void LED_Init(void);//≥ı ºªØ
 
