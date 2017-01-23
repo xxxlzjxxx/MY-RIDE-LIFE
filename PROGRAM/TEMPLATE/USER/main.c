@@ -42,6 +42,7 @@
 #include "led.h"
 #include "key.h"
 #include "usmart.h"
+#include "RTC.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -83,6 +84,10 @@ void test_fun(void(*ledset)(u8),u8 sta)
   */
 int main(void)
 {
+    RTC_TimeTypeDef RTC_TimeStruct;
+    RTC_DateTypeDef RTC_DateStruct;
+    u8 tbuf[40];
+	u8 t=0;
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 80 MHz */
     SystemClock_Config(1, 20, 2, 7, 2);
@@ -90,11 +95,25 @@ int main(void)
     uart_init(115200);              //初始化USART
     usmart_dev.init(80); 		    //初始化USMART
     LED_Init();                     //初始化LED 
+    RTC_Init();                     //初始化RTC 
+    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  		   
     while(1)
     {
-		printf(">>OK.");
+//		t++;
+//		if((t%100)==0)	//每1000ms更新一次显示数据
+//		{
+            HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
+			printf("Time:%02d:%02d:%02d  ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 
+//			LCD_ShowString(30,140,210,16,16,tbuf);	
+            HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
+			printf("Date:20%02d-%02d-%02d  ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 
+//			LCD_ShowString(30,160,210,16,16,tbuf);	
+			printf("Week:%d\r\n",RTC_DateStruct.WeekDay); 
+//			LCD_ShowString(30,180,210,16,16,tbuf);
+//		} 
+//		if((t%200)==0)LED0_Toggle;	//每200ms,翻转一次LED0 
         delay_ms(1000);
-    }
+	}  
 } 
 /**
   * @brief  System Clock Configuration
@@ -118,7 +137,7 @@ int main(void)
 //void Stm32_Clock_Init(u32 plln,u32 pllm,u32 pllp,u32 pllq)
 void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
 {
-    HAL_StatusTypeDef ret = HAL_OK;
+//    HAL_StatusTypeDef ret = HAL_OK;
     RCC_ClkInitTypeDef RCC_ClkInitStruct;
     RCC_OscInitTypeDef RCC_OscInitStruct;
     __HAL_RCC_PWR_CLK_ENABLE(); //使能 PWR 时钟

@@ -4,6 +4,7 @@
 //这下面要包含所用到的函数所申明的头文件(用户自己添加) 
 #include "delay.h"	 	
 #include "sys.h"
+#include "rtc.h"
 
 //#include "sdram.h"
 //#include "ltdc.h"
@@ -19,10 +20,12 @@ struct _m_usmart_nametab usmart_nametab[]=
 	(void*)write_addr,"void write_addr(u32 addr,u32 val)",	 
 #endif		   
 	(void*)delay_ms,"void delay_ms(u16 nms)",
- 	(void*)delay_us,"void delay_us(u32 nus)",	  
-		
-	(void*)led_set,"void led_set(u8 sta)",
-	(void*)test_fun,"void test_fun(void(*ledset)(u8),u8 sta)",						
+ 	(void*)delay_us,"void delay_us(u32 nus)",
+        
+    (void*)RTC_Set_Time,"u8 RTC_Set_Time(u8 hour,u8 min,u8 sec,u8 ampm)",
+    (void*)RTC_Set_Date,"u8 RTC_Set_Date(u8 year,u8 month,u8 date,u8 week)",
+    (void*)RTC_Set_AlarmA,"void RTC_Set_AlarmA(u8 week,u8 hour,u8 min,u8 sec)",
+    (void*)RTC_Set_WakeUp,"void RTC_Set_WakeUp(u8 wksel,u16 cnt)",					
 };						  
 ///////////////////////////////////END///////////////////////////////////////////////
 /////////////////////////////////////////////////////////////////////////////////////

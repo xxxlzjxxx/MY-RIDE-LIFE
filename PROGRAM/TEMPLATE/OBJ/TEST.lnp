@@ -67,6 +67,7 @@
 "..\obj\key.o"
 "..\obj\exti.o"
 "..\obj\timer.o"
+"..\obj\rtc.o"
 "..\obj\usmart.o"
 "..\obj\usmart_config.o"
 "..\obj\usmart_str.o"
