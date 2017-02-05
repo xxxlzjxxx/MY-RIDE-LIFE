@@ -77,7 +77,7 @@ int main(void)
     uart_init(115200);              //初始化USART
     usmart_dev.init(80); 		    //初始化USMART
     LED_Init();                     //初始化LED
-    MY_ADC_Init();                  //初始化ADC1通道5    
+    MY_ADC_Init();                  //初始化ADC1通道9  
     RTC_Init();                     //初始化RTC 
     RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  		   
     while(1)
@@ -93,10 +93,10 @@ int main(void)
 //			LCD_ShowString(30,160,210,16,16,tbuf);	
         printf("Week:%d\r\n",RTC_DateStruct.WeekDay); 
 //			LCD_ShowString(30,180,210,16,16,tbuf);
-        adcx=Get_Adc_Average(ADC_CHANNEL_9,20);//获取通道5的转换值，20次取平均
-        printf("ADC_VALUE: %d ", adcx);
+        adcx=Get_Adc_Average(ADC_CHANNEL_10,20);//获取通道5的转换值，20次取平均
+        printf("ADC1_CH10_VALUE: %d " , adcx);
         temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
-        printf("VALUE: %.3f",temp);
+        printf("VALUE: %.3f\t",temp);
         
         LED0_Toggle;
 //		} 

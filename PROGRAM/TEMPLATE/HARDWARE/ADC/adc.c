@@ -45,7 +45,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
     __HAL_RCC_ADC_CLK_ENABLE();            //使能ADC时钟
     __HAL_RCC_GPIOA_CLK_ENABLE();			//开启GPIOA时钟
 	
-    GPIO_Initure.Pin=GPIO_PIN_4;            //PA5
+    GPIO_Initure.Pin=GPIO_PIN_5;            //PA4
     GPIO_Initure.Mode=GPIO_MODE_ANALOG;     //模拟
     GPIO_Initure.Pull=GPIO_NOPULL;          //不带上下拉
     HAL_GPIO_Init(GPIOA,&GPIO_Initure);
@@ -60,7 +60,7 @@ u16 Get_Adc(u32 ch)
     
     ADC1_ChanConf.Channel=ch;                                   //通道
     ADC1_ChanConf.Rank=1;                                       //第1个序列，序列1
-    ADC1_ChanConf.SamplingTime=__HAL_ADC_SMPR1;        //采样时间 ADC_SAMPLETIME
+    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_3CYCLES;        //采样时间 ADC_SAMPLETIME
     ADC1_ChanConf.Offset=0;                 
     HAL_ADC_ConfigChannel(&ADC1_Handler,&ADC1_ChanConf);        //通道配置
 	
