@@ -60,7 +60,7 @@ u16 Get_Adc(u32 ch)
     
     ADC1_ChanConf.Channel=ch;                                   //通道
     ADC1_ChanConf.Rank=1;                                       //第1个序列，序列1
-    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_3CYCLES;        //采样时间 ADC_SAMPLETIME
+    ADC1_ChanConf.SamplingTime=ADC_SAMPLETIME_480CYCLES;        //采样时间 ADC_SAMPLETIME
     ADC1_ChanConf.Offset=0;                 
     HAL_ADC_ConfigChannel(&ADC1_Handler,&ADC1_ChanConf);        //通道配置
 	

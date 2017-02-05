@@ -91,12 +91,12 @@ int main(void)
         HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
         printf("Date:20%02d-%02d-%02d  ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 
 //			LCD_ShowString(30,160,210,16,16,tbuf);	
-        printf("Week:%d\r\n",RTC_DateStruct.WeekDay); 
+        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
 //			LCD_ShowString(30,180,210,16,16,tbuf);
-        adcx=Get_Adc_Average(ADC_CHANNEL_10,20);//获取通道5的转换值，20次取平均
-        printf("ADC1_CH10_VALUE: %d " , adcx);
-        temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
-        printf("VALUE: %.3f\t",temp);
+        adcx=Get_Adc_Average(ADC_CHANNEL_TEMPSENSOR,10);//获取通道5的转换值，20次取平均
+        printf("ADC1_TEMPSENSOR_VALUE: %d " , adcx);
+        temp=(((float)adcx*(3.3/4096)) - 0.76) / 0.0025 + 25;          //获取计算后的带小数的实际电压值，比如3.1111
+        printf("VALUE: %.3f\r\n",temp);
         
         LED0_Toggle;
 //		} 
