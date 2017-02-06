@@ -66,8 +66,8 @@ void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
   */
 int main(void)
 {
-    RTC_TimeTypeDef RTC_TimeStruct;
-    RTC_DateTypeDef RTC_DateStruct;
+//    RTC_TimeTypeDef RTC_TimeStruct;
+//    RTC_DateTypeDef RTC_DateStruct;
     u16 adcx;
 	float temp;
     HAL_Init(); //初始化 HAL 库
@@ -75,27 +75,28 @@ int main(void)
     SystemClock_Config(1, 20, 2, 7, 2);
     delay_init(80);                //初始化延时函数
     uart_init(115200);              //初始化USART
+    printf(">>system reset.\r\n");
     usmart_dev.init(80); 		    //初始化USMART
     LED_Init();                     //初始化LED
     MY_ADC_Init();                  //初始化ADC1通道9  
-    RTC_Init();                     //初始化RTC 
-    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  		   
+//    RTC_Init();                     //初始化RTC 
+//    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  		   
     while(1)
     {
 //		t++;
 //		if((t%100)==0)	//每1000ms更新一次显示数据
 //		{
-        HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
-        printf("Time:%02d:%02d:%02d  ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 
-//			LCD_ShowString(30,140,210,16,16,tbuf);	
-        HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
-        printf("Date:20%02d-%02d-%02d  ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 
-//			LCD_ShowString(30,160,210,16,16,tbuf);	
-        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
-//			LCD_ShowString(30,180,210,16,16,tbuf);
-        adcx=Get_Adc_Average(ADC_CHANNEL_TEMPSENSOR,10);//获取通道5的转换值，20次取平均
-        printf("ADC1_TEMPSENSOR_VALUE: %d " , adcx);
-        temp=(((float)adcx*(3.3/4096)) - 0.76) / 0.0025 + 25;          //获取计算后的带小数的实际电压值，比如3.1111
+//        HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
+//        printf("Time:%02d:%02d:%02d  ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 
+////			LCD_ShowString(30,140,210,16,16,tbuf);	
+//        HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
+//        printf("Date:20%02d-%02d-%02d  ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 
+////			LCD_ShowString(30,160,210,16,16,tbuf);	
+//        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
+////			LCD_ShowString(30,180,210,16,16,tbuf);
+        adcx=Get_Adc_Average(ADC_CHANNEL_9,10);//获取通道0的转换值，10次取平均
+        printf("ADC1_CH9_PA4_VALUE: %d " , adcx);
+        temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
         printf("VALUE: %.3f\r\n",temp);
         
         LED0_Toggle;
@@ -129,6 +130,7 @@ void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
 //    HAL_StatusTypeDef ret = HAL_OK;
     RCC_ClkInitTypeDef RCC_ClkInitStruct;
     RCC_OscInitTypeDef RCC_OscInitStruct;
+//    RCC_PeriphCLKInitTypeDef PeriphClkInit;
     __HAL_RCC_PWR_CLK_ENABLE(); //使能 PWR 时钟
 //以下为MSI时钟的配置
 //    /* MSI is enabled after System reset, activate PLL with MSI as source */
@@ -156,9 +158,7 @@ void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
     RCC_OscInitStruct.PLL.PLLN = plln;
     RCC_OscInitStruct.PLL.PLLR = pllr;
     RCC_OscInitStruct.PLL.PLLP = pllp;
-    RCC_OscInitStruct.PLL.PLLQ = pllq;
-    
-    
+    RCC_OscInitStruct.PLL.PLLQ = pllq;      
     if(HAL_RCC_OscConfig(&RCC_OscInitStruct) != HAL_OK)
     {
         /* Initialization Error */
@@ -177,5 +177,30 @@ void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
     /* Initialization Error */
         while(1);
     }
+    
+//    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+//    PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_SYSCLK;
+//    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+//    {
+//        while(1);
+//    }
+
+//    /**Configure the main internal regulator output voltage 
+//    */
+//    if (HAL_PWREx_ControlVoltageScaling(PWR_REGULATOR_VOLTAGE_SCALE1) != HAL_OK)
+//    {
+//        while(1);
+//    }
+
+//    /**Configure the Systick interrupt time 
+//    */
+//    HAL_SYSTICK_Config(HAL_RCC_GetHCLKFreq()/1000);
+
+//    /**Configure the Systick 
+//    */
+//    HAL_SYSTICK_CLKSourceConfig(SYSTICK_CLKSOURCE_HCLK);
+
+//    /* SysTick_IRQn interrupt configuration */
+//    HAL_NVIC_SetPriority(SysTick_IRQn, 0, 0);    
 }
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

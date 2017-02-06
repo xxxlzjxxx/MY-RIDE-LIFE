@@ -730,11 +730,11 @@ ARM Macro Assembler    Page 12
               00000200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M4.fp --apcs=int
-erwork --depend=..\obj\startup_stm32l476xx.d -o..\obj\startup_stm32l476xx.o -IH
-:\github\MY-RIDE-LIFE\PROGRAM\TEMPLATE\USER\RTE\_TEST -ID:\Keil_v5\ARM\PACK\Kei
-l\STM32L4xx_DFP\1.3.0\Device\Include -ID:\Keil_v5\ARM\CMSIS\Include --predefine
-="__UVISION_VERSION SETA 522" --predefine="STM32L476xx SETA 1" --list=.\listing
-s\startup_stm32l476xx.lst ..\CORE\startup_stm32l476xx.s
+erwork --depend=..\obj\startup_stm32l476xx.d -o..\obj\startup_stm32l476xx.o -IE
+:\GitHub\MY-RIDE-LIFE\PROGRAM\TEMPLATE\USER\RTE\_TEST -I"D:\keil for arm v5\PAC
+K\Keil\STM32L4xx_DFP\1.3.0\Device\Include" -I"D:\keil for arm v5\ARM\CMSIS\Incl
+ude" --predefine="__UVISION_VERSION SETA 522" --predefine="STM32L476xx SETA 1" 
+--list=.\listings\startup_stm32l476xx.lst ..\CORE\startup_stm32l476xx.s
 
 
 
