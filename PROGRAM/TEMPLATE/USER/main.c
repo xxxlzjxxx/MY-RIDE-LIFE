@@ -94,7 +94,8 @@ int main(void)
 ////			LCD_ShowString(30,160,210,16,16,tbuf);	
 //        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
 ////			LCD_ShowString(30,180,210,16,16,tbuf);
-        adcx=Get_Adc_Average(ADC_CHANNEL_9,10);//获取通道0的转换值，10次取平均
+        adcx=Get_Adc(ADC_CHANNEL_9);//获取通道9的转换值，10次取平均
+        adcx = Get_Adc_Average(ADC_CHANNEL_9, 10);
         printf("ADC1_CH9_PA4_VALUE: %d " , adcx);
         temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
         printf("VALUE: %.3f\r\n",temp);
@@ -130,7 +131,7 @@ void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
 //    HAL_StatusTypeDef ret = HAL_OK;
     RCC_ClkInitTypeDef RCC_ClkInitStruct;
     RCC_OscInitTypeDef RCC_OscInitStruct;
-//    RCC_PeriphCLKInitTypeDef PeriphClkInit;
+    RCC_PeriphCLKInitTypeDef PeriphClkInit;
     __HAL_RCC_PWR_CLK_ENABLE(); //使能 PWR 时钟
 //以下为MSI时钟的配置
 //    /* MSI is enabled after System reset, activate PLL with MSI as source */
@@ -178,12 +179,12 @@ void SystemClock_Config(u32 pllm, u32 plln, u32 pllr, u32 pllp,u32 pllq)
         while(1);
     }
     
-//    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
-//    PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_SYSCLK;
-//    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
-//    {
-//        while(1);
-//    }
+    PeriphClkInit.PeriphClockSelection = RCC_PERIPHCLK_ADC;
+    PeriphClkInit.AdcClockSelection = RCC_ADCCLKSOURCE_SYSCLK;
+    if (HAL_RCCEx_PeriphCLKConfig(&PeriphClkInit) != HAL_OK)
+    {
+        while(1);
+    }
 
 //    /**Configure the main internal regulator output voltage 
 //    */
