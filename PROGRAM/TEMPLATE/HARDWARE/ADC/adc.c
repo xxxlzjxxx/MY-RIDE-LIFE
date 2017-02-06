@@ -14,7 +14,7 @@
 ////////////////////////////////////////////////////////////////////////////////// 	
 ADC_MultiModeTypeDef multimode;
 ADC_HandleTypeDef ADC1_Handler;//ADC句柄
-ADC_ChannelConfTypeDef ADC1_ChanConf;
+//ADC_ChannelConfTypeDef ADC1_ChanConf;
 //初始化ADC
 //ch: ADC_channels 
 //通道值 0~16取值范围为：ADC_CHANNEL_0~ADC_CHANNEL_16
@@ -46,15 +46,15 @@ void MY_ADC_Init(void)
         while(1);
     }
     
-    ADC1_ChanConf.Channel = ADC_CHANNEL_9;                                   //通道
-    ADC1_ChanConf.Rank = 1;                                       //第1个序列，序列1
-    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;        //采样时间 ADC_SAMPLETIME
-    ADC1_ChanConf.SingleDiff = ADC_SINGLE_ENDED;
-    ADC1_ChanConf.OffsetNumber = ADC_OFFSET_NONE;    
-    ADC1_ChanConf.Offset = 0;                 
-    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);        //通道配置
-    HAL_ADC_Start(&ADC1_Handler);                               //开启ADC	
-    HAL_ADC_PollForConversion(&ADC1_Handler, 10);                //轮询转换
+//    ADC1_ChanConf.Channel = ADC_CHANNEL_9;                                   //通道
+//    ADC1_ChanConf.Rank = ADC_REGULAR_RANK_1;                                       //第1个序列，序列1
+//    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;        //采样时间 ADC_SAMPLETIME
+//    ADC1_ChanConf.SingleDiff = ADC_SINGLE_ENDED;
+//    ADC1_ChanConf.OffsetNumber = ADC_OFFSET_NONE;    
+//    ADC1_ChanConf.Offset = 0;                 
+//    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);        //通道配置
+//    HAL_ADC_Start(&ADC1_Handler);                               //开启ADC	
+//    HAL_ADC_PollForConversion(&ADC1_Handler, 10);                //轮询转换
 }
 
 //ADC底层驱动，引脚配置，时钟使能
@@ -64,7 +64,7 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
 {
     GPIO_InitTypeDef GPIO_Initure;
     __HAL_RCC_ADC_CLK_ENABLE();            //使能ADC时钟
-    __HAL_RCC_GPIOC_CLK_ENABLE();			//开启GPIOA时钟
+    __HAL_RCC_GPIOA_CLK_ENABLE();			//开启GPIOA时钟
 	
     GPIO_Initure.Pin=GPIO_PIN_4;            //PA4
     GPIO_Initure.Mode=GPIO_MODE_ANALOG;     //模拟
@@ -77,18 +77,18 @@ void HAL_ADC_MspInit(ADC_HandleTypeDef* hadc)
 //返回值:转换结果
 u16 Get_Adc(u32 ch)   
 {
-//    ADC_ChannelConfTypeDef ADC1_ChanConf;
-//    
-//    ADC1_ChanConf.Channel = ch;                                   //通道
-//    ADC1_ChanConf.Rank = 1;                                       //第1个序列，序列1
-//    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;        //采样时间 ADC_SAMPLETIME
-//    ADC1_ChanConf.SingleDiff = ADC_SINGLE_ENDED;
-//    ADC1_ChanConf.OffsetNumber = ADC_OFFSET_NONE;    
-//    ADC1_ChanConf.Offset = 0;                 
-//    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);        //通道配置
+    ADC_ChannelConfTypeDef ADC1_ChanConf;
+    
+    ADC1_ChanConf.Channel = ch;                                   //通道
+    ADC1_ChanConf.Rank = 1;                                       //第1个序列，序列1
+    ADC1_ChanConf.SamplingTime = ADC_SAMPLETIME_2CYCLES_5;        //采样时间 ADC_SAMPLETIME
+    ADC1_ChanConf.SingleDiff = ADC_SINGLE_ENDED;
+    ADC1_ChanConf.OffsetNumber = ADC_OFFSET_NONE;    
+    ADC1_ChanConf.Offset = 0;                 
+    HAL_ADC_ConfigChannel(&ADC1_Handler, &ADC1_ChanConf);        //通道配置
 	
-//    HAL_ADC_Start(&ADC1_Handler);                               //开启ADC	
-//    HAL_ADC_PollForConversion(&ADC1_Handler, 10);                //轮询转换
+    HAL_ADC_Start(&ADC1_Handler);                               //开启ADC	
+    HAL_ADC_PollForConversion(&ADC1_Handler, 100);                //轮询转换
  
 	return (u16)HAL_ADC_GetValue(&ADC1_Handler);	        //返回最近一次ADC1规则组的转换结果
 }

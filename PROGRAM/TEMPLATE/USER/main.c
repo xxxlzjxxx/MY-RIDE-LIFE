@@ -94,8 +94,8 @@ int main(void)
 ////			LCD_ShowString(30,160,210,16,16,tbuf);	
 //        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
 ////			LCD_ShowString(30,180,210,16,16,tbuf);
-        adcx=Get_Adc(ADC_CHANNEL_9);//获取通道9的转换值，10次取平均
-        adcx = Get_Adc_Average(ADC_CHANNEL_9, 10);
+//        adcx=Get_Adc(ADC_CHANNEL_9);//获取通道9的转换值，10次取平均
+        adcx = Get_Adc_Average(ADC_CHANNEL_9, 20);
         printf("ADC1_CH9_PA4_VALUE: %d " , adcx);
         temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
         printf("VALUE: %.3f\r\n",temp);
