@@ -69,6 +69,7 @@
 "..\obj\timer.o"
 "..\obj\rtc.o"
 "..\obj\adc.o"
+"..\obj\dac.o"
 "..\obj\usmart.o"
 "..\obj\usmart_config.o"
 "..\obj\usmart_str.o"

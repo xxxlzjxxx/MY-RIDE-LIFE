@@ -44,6 +44,7 @@
 #include "usmart.h"
 #include "RTC.h"
 #include "adc.h"
+#include "dac.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -68,8 +69,11 @@ int main(void)
 {
 //    RTC_TimeTypeDef RTC_TimeStruct;
 //    RTC_DateTypeDef RTC_DateStruct;
-    u16 adcx;
+//    u16 adcx;
 	float temp;
+    u8 t=0;	 
+	u16 dacval=0;
+	u8 key;
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 80 MHz */
     SystemClock_Config(1, 20, 2, 7, 2);
@@ -78,32 +82,47 @@ int main(void)
     printf(">>system reset.\r\n");
     usmart_dev.init(80); 		    //初始化USMART
     LED_Init();                     //初始化LED
-    MY_ADC_Init();                  //初始化ADC1通道9  
+    KEY_Init();                     //初始化按键
+//    MY_ADC_Init();                  //初始化ADC1通道9  
 //    RTC_Init();                     //初始化RTC 
-//    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次  		   
+//    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次
+    DAC1_Init();                    //初始化DAC1 
+    
     while(1)
     {
-//		t++;
-//		if((t%100)==0)	//每1000ms更新一次显示数据
-//		{
-//        HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
-//        printf("Time:%02d:%02d:%02d  ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 
-////			LCD_ShowString(30,140,210,16,16,tbuf);	
-//        HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
-//        printf("Date:20%02d-%02d-%02d  ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 
-////			LCD_ShowString(30,160,210,16,16,tbuf);	
-//        printf("Week:%d\t",RTC_DateStruct.WeekDay); 
-////			LCD_ShowString(30,180,210,16,16,tbuf);
-//        adcx=Get_Adc(ADC_CHANNEL_9);//获取通道9的转换值，10次取平均
-        adcx = Get_Adc_Average(ADC_CHANNEL_9, 20);
-        printf("ADC1_CH9_PA4_VALUE: %d " , adcx);
-        temp=(float)adcx*(3.3/4096);          //获取计算后的带小数的实际电压值，比如3.1111
-        printf("VALUE: %.3f\r\n",temp);
-        
-        LED0_Toggle;
-//		} 
-//		if((t%200)==0)LED0_Toggle;	//每200ms,翻转一次LED0 
-        delay_ms(1000);
+		t++;
+		key = KEY_Scan(0);			  
+		if(key == KEY2_PRES)
+		{		 
+			if(dacval<4000)dacval+=200;
+            HAL_DAC_SetValue(&DAC1_Handler,DAC_CHANNEL_2,DAC_ALIGN_12B_R,dacval);//设置DAC值
+		}else if(key==WKUP_PRES)	
+		{
+			if(dacval>200)dacval-=200;
+			else dacval=0;
+            HAL_DAC_SetValue(&DAC1_Handler,DAC_CHANNEL_2,DAC_ALIGN_12B_R,dacval);//设置DAC值
+		}	 
+//		if(t==10||key==KEY2_PRES||key==WKUP_PRES) 	    //WKUP/KEY1按下了,或者定时时间到了
+//		{	  
+//            adcx=HAL_DAC_GetValue(&DAC1_Handler,DAC_CHANNEL_1);//读取前面设置DAC的值
+//			LCD_ShowxNum(94,150,adcx,4,16,0);     	    //显示DAC寄存器值
+//			temp=(float)adcx*(3.3/4096);			    //得到DAC电压值
+//			adcx=temp;
+// 			LCD_ShowxNum(94,170,temp,1,16,0);     	    //显示电压值整数部分
+// 			temp-=adcx;
+//			temp*=1000;
+//			LCD_ShowxNum(110,170,temp,3,16,0X80); 	    //显示电压值的小数部分
+// 			adcx=Get_Adc_Average(ADC_CHANNEL_5,10);     //得到ADC转换值	  
+//			temp=(float)adcx*(3.3/4096);			    //得到ADC电压值
+//			adcx=temp;
+// 			LCD_ShowxNum(94,190,temp,1,16,0);     	    //显示电压值整数部分
+// 			temp-=adcx;
+//			temp*=1000;
+//			LCD_ShowxNum(110,190,temp,3,16,0X80); 	    //显示电压值的小数部分
+//			LED0_Toggle;	   
+//			t=0;
+//		}	    
+		delay_ms(10);
 	}  
 } 
 /**

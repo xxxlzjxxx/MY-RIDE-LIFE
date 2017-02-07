@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L476xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\KEY;..\HARDWARE\LED;..\HARDWARE\EXTI;..\HARDWARE\TIMER;..\USMART;..\HARDWARE\RTC;..\HARDWARE\ADC</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\KEY;..\HARDWARE\LED;..\HARDWARE\EXTI;..\HARDWARE\TIMER;..\USMART;..\HARDWARE\RTC;..\HARDWARE\ADC;..\HARDWARE\DAC</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -773,6 +773,11 @@
               <FileName>adc.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\ADC\adc.c</FilePath>
+            </File>
+            <File>
+              <FileName>dac.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HARDWARE\DAC\dac.c</FilePath>
             </File>
           </Files>
         </Group>
