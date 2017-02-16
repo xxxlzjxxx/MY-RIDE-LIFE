@@ -15,14 +15,10 @@
   (GlobalState
     (FileView
       (Path "Design Resources")
-      (Path "Design Resources"
-         "E:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn")
-      (Path "Design Resources"
-         "E:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn"
-         "SCHEMATIC1")
+      (Path "Design Resources" ".\mb1136_boostpack_v10a.dsn")
+      (Path "Design Resources" ".\mb1136_boostpack_v10a.dsn" "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Select "Design Resources"
-         "E:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn"))
+      (Select "Design Resources" ".\mb1136_boostpack_v10a.dsn"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -32,27 +28,30 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 52 1183 52 579")
-        (Scroll "906 573")
-        (Zoom "248")
+        (Placement "44 0 1 -1 -1 -8 -31 26 1610 26 601")
+        (Scroll "-219 0")
+        (Zoom "67")
         (Occurrence "/"))
       (Path
-         "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
+         "H:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "02 MB1136"))
+      (Page "03 BOOSTPACK"))
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 0 567 0 571")
-        (Scroll "90 95")
-        (Zoom "192")
+        (Placement "44 0 1 -1 -1 -8 -31 52 1636 52 627")
+        (Scroll "547 499")
+        (Zoom "200")
         (Occurrence "/"))
       (Path
-         "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
+         "H:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "03 BOOSTPACK")))
-  (MPSSessionName "HUIYUAN-LZJ")
+      (Page "02 MB1136")))
+  (MPSSessionName "xxxlzjxxx")
   (PartMRUSelector
+    (OFFPAGELEFT-L
+      (LibraryName "D:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
+      (DeviceIndex "0"))
     (GND_SIGNAL
       (LibraryName "D:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
       (DeviceIndex "0"))))
