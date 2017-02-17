@@ -52,6 +52,7 @@ UART_HandleTypeDef huart2;
 void SystemClock_Config(void);
 void Error_Handler(void);
 static void MX_GPIO_Init(void);
+
 /* USER CODE BEGIN PFP */
 /* Private function prototypes -----------------------------------------------*/
 
@@ -211,7 +212,7 @@ static void MX_ADC1_Init(void)
 
     /**Configure Regular Channel 
     */
-  sConfig.Channel = ADC_CHANNEL_1;
+  sConfig.Channel = ADC_CHANNEL_9;
   sConfig.Rank = 1;
   sConfig.SamplingTime = ADC_SAMPLETIME_247CYCLES_5;
   sConfig.SingleDiff = ADC_SINGLE_ENDED;
@@ -278,17 +279,14 @@ static void MX_GPIO_Init(void)
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(LD2_GPIO_Port, &GPIO_InitStruct);
-  
-/* USER CODE BEGIN 4 */  
+
+}
+
+/* USER CODE BEGIN 4 */
     GPIO_InitStruct.Pin=GPIO_PIN_0;            //PA4
     GPIO_InitStruct.Mode=GPIO_MODE_ANALOG;     //模拟
     GPIO_InitStruct.Pull=GPIO_NOPULL;          //不带上下拉
     HAL_GPIO_Init(GPIOC,&GPIO_InitStruct);
-/* USER CODE END 4 */
-}
-
-/* USER CODE BEGIN 4 */
-
 /* USER CODE END 4 */
 
 /**
