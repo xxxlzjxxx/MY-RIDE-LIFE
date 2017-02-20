@@ -82,7 +82,22 @@
     ("Allegro Netlist Combine Property String" "PCB Footprint")
     ("Allegro Netlist Ignore Fixed Property" "FALSE")
     ("Allegro Netlist User Defined Property" "FALSE")
-    (Netlist_TAB "0"))
+    (Netlist_TAB "0")
+    (BOM_Scope "0")
+    (BOM_Mode "0")
+    (BOM_Report_File
+       "E:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.BOM")
+    (BOM_Merge_Include "FALSE")
+    (BOM_Property_Combine_7.0
+       "{Item}\t{Quantity}\t{Reference}\t{Value}\t{PCB Footprint}\t{Description}\t{Corporation}\t{Manufacture}")
+    (BOM_Header
+       "Item\tQuantity\tReference\tPart\tPCB Footprint\tDescription\tCorporation\tManufacture")
+    (BOM_Include_File
+       "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.INC")
+    (BOM_Include_File_Combine_7.0 "{Item}\t{Quantity}\t{Reference}\t{Value}")
+    (BOM_One_Part_Per_Line "FALSE")
+    (Open_BOM_in_Excel "FALSE")
+    (BOM_View_Output "FALSE"))
   (Folder "Outputs"
     (File ".\mb1136_boostpack_v10a.csv"
       (Type "Report"))
@@ -96,7 +111,9 @@
       (DisplayName "pstxprt.dat"))
     (File ".\allegro\pstchip.dat"
       (Type "Report")
-      (DisplayName "pstchip.dat")))
+      (DisplayName "pstchip.dat"))
+    (File ".\mb1136_boostpack_v10a.bom"
+      (Type "Report")))
   (Folder "Referenced Projects")
   (GlobalState
     (FileView
@@ -116,13 +133,24 @@
       (Type "COrSchematicDoc")
       (Frame
         (Placement "44 0 1 -1 -1 -8 -31 78 1209 78 605")
-        (Scroll "758 46")
-        (Zoom "112")
+        (Scroll "1817 0")
+        (Zoom "176")
         (Occurrence "/"))
       (Path
          "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
       (Schematic "SCHEMATIC1")
-      (Page "03 BOOSTPACK")))
+      (Page "03 BOOSTPACK"))
+    (Doc
+      (Type "COrSchematicDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -8 -31 52 554 52 592")
+        (Scroll "0 0")
+        (Zoom "100")
+        (Occurrence "/"))
+      (Path
+         "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
+      (Schematic "SCHEMATIC1")
+      (Page "02 MB1136")))
   (MPSSessionName "HUIYUAN-LZJ")
   (PartMRUSelector
     (OFFPAGELEFT-L

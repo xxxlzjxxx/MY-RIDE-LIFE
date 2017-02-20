@@ -1,8 +1,8 @@
-{ Using PSTWRITER 16.6.0 d001Feb-17-2017 at 17:46:40 }
+{ Using PSTWRITER 16.6.0 d001Feb-20-2017 at 09:27:04 }
 
 #1 WARNING(ORCAP-36038): "No_connect" property on Pin "USB1.2" ignored for USB1: SCHEMATIC1, 03 BOOSTPACK (210.82, 190.50). Connecting pin to net "N16789003".
 #2 WARNING(ORCAP-36038): "No_connect" property on Pin "U25.4" ignored for U25: SCHEMATIC1, 03 BOOSTPACK (177.80, 195.58). Connecting pin to net "N16789003".
-#3 WARNING(ORCAP-36038): "No_connect" property on Pin "U25.3" ignored for U25: SCHEMATIC1, 03 BOOSTPACK (177.80, 195.58). Connecting pin to net "N16789020".
+#3 WARNING(ORCAP-36038): "No_connect" property on Pin "U25.3" ignored for U25: SCHEMATIC1, 03 BOOSTPACK (177.80, 195.58). Connecting pin to net "N16789003".
 #4 WARNING(ORCAP-36038): "No_connect" property on Pin "U1.6" ignored for U1: SCHEMATIC1, 02 MB1136 (121.92, 73.66). Connecting pin to net "VCC_E5V".
 #5 WARNING(ORCAP-36038): "No_connect" property on Pin "U1.5" ignored for U1: SCHEMATIC1, 02 MB1136 (121.92, 73.66). Connecting pin to net "VCC_VDD".
 #6 WARNING(ORCAP-36038): "No_connect" property on Pin "U1.18" ignored for U1: SCHEMATIC1, 02 MB1136 (121.92, 73.66). Connecting pin to net "VCC_5V".
