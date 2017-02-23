@@ -67,8 +67,9 @@ void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
   */
 int main(void)
 {
-//    RTC_TimeTypeDef RTC_TimeStruct;
-//    RTC_DateTypeDef RTC_DateStruct;
+    RTC_TimeTypeDef RTC_TimeStruct;
+    RTC_DateTypeDef RTC_DateStruct;
+    u8 tbuf[40];
 //    u16 adcx;
 	float temp;
     u8 t=0;	 
@@ -84,13 +85,18 @@ int main(void)
     LED_Init();                     //初始化LED
     KEY_Init();                     //初始化按键
 //    MY_ADC_Init();                  //初始化ADC1通道9  
-//    RTC_Init();                     //初始化RTC 
-//    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次
+    RTC_Init();                     //初始化RTC 
+    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次
     DAC1_Init();                    //初始化DAC1 
     
     while(1)
     {
 		t++;
+        HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
+        printf(">>Time:%02d:%02d:%02d ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 	
+        HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
+        printf("Date:20%02d-%02d-%02d ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 	
+        printf("Week:%d  \r\n" ,RTC_DateStruct.WeekDay);
 		key = KEY_Scan(0);			  
 		if(key == KEY2_PRES)
 		{		 
@@ -122,7 +128,7 @@ int main(void)
 //			LED0_Toggle;	   
 //			t=0;
 //		}	    
-		delay_ms(10);
+		delay_ms(1000);
 	}  
 } 
 /**
