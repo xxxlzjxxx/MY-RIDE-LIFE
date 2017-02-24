@@ -45,6 +45,9 @@
 #include "RTC.h"
 #include "adc.h"
 #include "dac.h"
+#include "tft24.h"
+#include "font.h"
+#include "pic.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -59,7 +62,7 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
-
+extern const unsigned char gImage_pic[61258];
 /**
   * @brief  Main program
   * @param  None
@@ -67,47 +70,72 @@ void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
   */
 int main(void)
 {
+//以下为RTC测试使用
     RTC_TimeTypeDef RTC_TimeStruct;
     RTC_DateTypeDef RTC_DateStruct;
-    u8 tbuf[40];
+//    u8 tbuf[40];
 //    u16 adcx;
-	float temp;
-    u8 t=0;	 
-	u16 dacval=0;
-	u8 key;
+//以下为DAC测试使用
+//	float temp;
+//    u8 t=0;	 
+//	u16 dacval=0;
+//	u8 key;
+//以下为LCD测试实验使用变量
+    u8 x=0;
+//	u8 lcd_id[12];
+//**********************************************************************************
     HAL_Init(); //初始化 HAL 库
-  /* Configure the System clock to have a frequency of 80 MHz */
-    SystemClock_Config(1, 20, 2, 7, 2);
-    delay_init(80);                //初始化延时函数
+  /* Configure the System clock to have a frequency of 40 MHz */
+    SystemClock_Config(1, 20, 4, 7, 2);
+    delay_init(40);                //初始化延时函数
+    TFT24_Init();                     //初始化LCD
     uart_init(115200);              //初始化USART
     printf(">>system reset.\r\n");
-    usmart_dev.init(80); 		    //初始化USMART
+    usmart_dev.init(40); 		    //初始化USMART
     LED_Init();                     //初始化LED
-    KEY_Init();                     //初始化按键
+    KEY_Init();                     //初始化按键   
 //    MY_ADC_Init();                  //初始化ADC1通道9  
     RTC_Init();                     //初始化RTC 
-    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次
-    DAC1_Init();                    //初始化DAC1 
+    RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次 
+    
+//    POINT_COLOR=RED; 
+//	sprintf((char*)lcd_id,"LCD ID:%04X",lcddev.id);//将LCD ID打印到lcd_id数组。    
     
     while(1)
     {
-		t++;
         HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
         printf(">>Time:%02d:%02d:%02d ",RTC_TimeStruct.Hours,RTC_TimeStruct.Minutes,RTC_TimeStruct.Seconds); 	
         HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
         printf("Date:20%02d-%02d-%02d ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 	
         printf("Week:%d  \r\n" ,RTC_DateStruct.WeekDay);
-		key = KEY_Scan(0);			  
-		if(key == KEY2_PRES)
-		{		 
-			if(dacval<4000)dacval+=200;
-            HAL_DAC_SetValue(&DAC1_Handler,DAC_CHANNEL_2,DAC_ALIGN_12B_R,dacval);//设置DAC值
-		}else if(key==WKUP_PRES)	
-		{
-			if(dacval>200)dacval-=200;
-			else dacval=0;
-            HAL_DAC_SetValue(&DAC1_Handler,DAC_CHANNEL_2,DAC_ALIGN_12B_R,dacval);//设置DAC值
-		}	 
+        
+        LCD_Drawbmp(20,20,200,200,gImage_pic);
+        GUI_Dot(10,10,RED);
+//        switch(x)
+//		{
+//			case 0:LCD_Clear(WHITE);break;
+//			case 1:LCD_Clear(BLACK);break;
+//			case 2:LCD_Clear(BLUE);break;
+//			case 3:LCD_Clear(RED);break;
+//			case 4:LCD_Clear(MAGENTA);break;
+//			case 5:LCD_Clear(GREEN);break;
+//			case 6:LCD_Clear(CYAN);break; 
+//			case 7:LCD_Clear(YELLOW);break;
+//			case 8:LCD_Clear(BRRED);break;
+//			case 9:LCD_Clear(GRAY);break;
+//			case 10:LCD_Clear(LGRAY);break;
+//			case 11:LCD_Clear(BROWN);break;
+//		}
+//		POINT_COLOR=RED;	  
+//		LCD_ShowString(10,40,240,32,32,"Apollo STM32F4/F7"); 	
+//		LCD_ShowString(10,80,240,24,24,"TFTLCD TEST");
+//		LCD_ShowString(10,110,240,16,16,"ATOM@ALIENTEK");
+// 		LCD_ShowString(10,130,240,16,16,lcd_id);		//显示LCD ID	      					 
+//		LCD_ShowString(10,150,240,12,12,"2016/1/6");	      					 
+		x++;
+		if(x==12)x=0;
+		LED0_Toggle;	 
+		delay_ms(1000);        
 //		if(t==10||key==KEY2_PRES||key==WKUP_PRES) 	    //WKUP/KEY1按下了,或者定时时间到了
 //		{	  
 //            adcx=HAL_DAC_GetValue(&DAC1_Handler,DAC_CHANNEL_1);//读取前面设置DAC的值
@@ -128,7 +156,7 @@ int main(void)
 //			LED0_Toggle;	   
 //			t=0;
 //		}	    
-		delay_ms(1000);
+//		delay_ms(1000);
 	}  
 } 
 /**
@@ -143,7 +171,7 @@ int main(void)
   *            HSE Frequency(Hz)              = 8000000
   *            PLL_M                          = 1
   *            PLL_N                          = 20
-  *            PLL_R                          = 2
+  *            PLL_R                          = 4
   *            PLL_P                          = 7
   *            PLL_Q                          = 2
   *            Flash Latency(WS)              = 4
