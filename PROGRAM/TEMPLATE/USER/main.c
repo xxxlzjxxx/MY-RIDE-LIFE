@@ -43,11 +43,13 @@
 #include "key.h"
 #include "usmart.h"
 #include "RTC.h"
-#include "adc.h"
-#include "dac.h"
-#include "tft24.h"
-#include "font.h"
-#include "pic.h"
+//#include "adc.h"
+//#include "dac.h"
+#include "lcd.h"
+//#include "font.h"
+//#include "pic.h"
+//#include "24cxx.h"
+#include "w25qxx.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -62,7 +64,10 @@
 /* Private variables ---------------------------------------------------------*/
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
-extern const unsigned char gImage_pic[61258];
+
+//extern const unsigned char gImage_pic[61258];
+const u8 TEXT_Buffer[]={"NUCLEO-L476RG IIC TEST"};//要写入到24c02的字符串数组
+#define SIZE sizeof(TEXT_Buffer)
 /**
   * @brief  Main program
   * @param  None
@@ -81,14 +86,19 @@ int main(void)
 //	u16 dacval=0;
 //	u8 key;
 //以下为LCD测试实验使用变量
-    u8 x=0;
+//    u8 x=0;
 //	u8 lcd_id[12];
+//以下为EEPROM测试使用
+    u8 key;
+	u16 i=0;
+	u8 datatemp[SIZE];
+    u32 nFLASH_SIZE;
 //**********************************************************************************
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 40 MHz */
     SystemClock_Config(1, 20, 4, 7, 2);
     delay_init(40);                //初始化延时函数
-    TFT24_Init();                     //初始化LCD
+//    TFT24_Init();                     //初始化LCD
     uart_init(115200);              //初始化USART
     printf(">>system reset.\r\n");
     usmart_dev.init(40); 		    //初始化USMART
@@ -97,10 +107,19 @@ int main(void)
 //    MY_ADC_Init();                  //初始化ADC1通道9  
     RTC_Init();                     //初始化RTC 
     RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次 
+//    AT24CXX_Init();				    //初始化IIC
+    W25QXX_Init();				    //W25QXX初始化
     
 //    POINT_COLOR=RED; 
 //	sprintf((char*)lcd_id,"LCD ID:%04X",lcddev.id);//将LCD ID打印到lcd_id数组。    
-    
+	while(W25QXX_ReadID()!=W25Q128)//检测不到
+	{
+		printf(">>Check Failed!   please check!\r\n");
+		delay_ms(500);
+		LED1_Toggle;//DS0闪烁
+	}
+    printf(">>ready!\r\n");
+    nFLASH_SIZE=32*1024*1024;	//FLASH 大小为32M字节
     while(1)
     {
         HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
@@ -109,54 +128,33 @@ int main(void)
         printf("Date:20%02d-%02d-%02d ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 	
         printf("Week:%d  \r\n" ,RTC_DateStruct.WeekDay);
         
-        LCD_Drawbmp(20,20,200,200,gImage_pic);
-        GUI_Dot(10,10,RED);
-//        switch(x)
-//		{
-//			case 0:LCD_Clear(WHITE);break;
-//			case 1:LCD_Clear(BLACK);break;
-//			case 2:LCD_Clear(BLUE);break;
-//			case 3:LCD_Clear(RED);break;
-//			case 4:LCD_Clear(MAGENTA);break;
-//			case 5:LCD_Clear(GREEN);break;
-//			case 6:LCD_Clear(CYAN);break; 
-//			case 7:LCD_Clear(YELLOW);break;
-//			case 8:LCD_Clear(BRRED);break;
-//			case 9:LCD_Clear(GRAY);break;
-//			case 10:LCD_Clear(LGRAY);break;
-//			case 11:LCD_Clear(BROWN);break;
-//		}
-//		POINT_COLOR=RED;	  
-//		LCD_ShowString(10,40,240,32,32,"Apollo STM32F4/F7"); 	
-//		LCD_ShowString(10,80,240,24,24,"TFTLCD TEST");
-//		LCD_ShowString(10,110,240,16,16,"ATOM@ALIENTEK");
-// 		LCD_ShowString(10,130,240,16,16,lcd_id);		//显示LCD ID	      					 
-//		LCD_ShowString(10,150,240,12,12,"2016/1/6");	      					 
-		x++;
-		if(x==12)x=0;
-		LED0_Toggle;	 
-		delay_ms(1000);        
-//		if(t==10||key==KEY2_PRES||key==WKUP_PRES) 	    //WKUP/KEY1按下了,或者定时时间到了
-//		{	  
-//            adcx=HAL_DAC_GetValue(&DAC1_Handler,DAC_CHANNEL_1);//读取前面设置DAC的值
-//			LCD_ShowxNum(94,150,adcx,4,16,0);     	    //显示DAC寄存器值
-//			temp=(float)adcx*(3.3/4096);			    //得到DAC电压值
-//			adcx=temp;
-// 			LCD_ShowxNum(94,170,temp,1,16,0);     	    //显示电压值整数部分
-// 			temp-=adcx;
-//			temp*=1000;
-//			LCD_ShowxNum(110,170,temp,3,16,0X80); 	    //显示电压值的小数部分
-// 			adcx=Get_Adc_Average(ADC_CHANNEL_5,10);     //得到ADC转换值	  
-//			temp=(float)adcx*(3.3/4096);			    //得到ADC电压值
-//			adcx=temp;
-// 			LCD_ShowxNum(94,190,temp,1,16,0);     	    //显示电压值整数部分
-// 			temp-=adcx;
-//			temp*=1000;
-//			LCD_ShowxNum(110,190,temp,3,16,0X80); 	    //显示电压值的小数部分
-//			LED0_Toggle;	   
-//			t=0;
-//		}	    
-//		delay_ms(1000);
+		key=KEY_Scan(0);
+		if(key==KEY1_PRES)//KEY1按下,写入24C02
+		{    
+			printf("Start Write ....");
+//			AT24CXX_Write(0,(u8*)TEXT_Buffer,SIZE);
+            W25QXX_Write((u8*)TEXT_Buffer,nFLASH_SIZE-100,SIZE);		//从倒数第100个地址处开始,写入SIZE长度的数据
+			printf("Write Finished!");//提示传送完成
+		}
+		if(key==KEY0_PRES)//KEY0按下,读取字符串并显示
+		{
+			printf("Start Read .... ");
+//			AT24CXX_Read(0,datatemp,SIZE);
+            W25QXX_Read(datatemp,nFLASH_SIZE-100,SIZE);					//从倒数第100个地址处开始,读出SIZE个字节
+			printf("The Data Readed Is:  ");//提示传送完成
+			//LCD_ShowString(30,190,200,16,16,datatemp);//显示读到的字符串
+            for(i = 0; i < SIZE; i++)
+            {
+                printf("%c", datatemp[i]);
+            }
+		}
+		i++;
+		delay_ms(10);
+		if(i==20)
+		{
+			LED0_Toggle;//提示系统正在运行	
+			i=0;
+		}
 	}  
 } 
 /**

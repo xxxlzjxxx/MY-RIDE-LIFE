@@ -21,8 +21,8 @@
  
 
 /*下面的方式是通过直接操作 HAL 库函数方式读取 IO*/
-//#define KEY0 HAL_GPIO_ReadPin(GPIOH,GPIO_PIN_3) //KEY0 按键 PH3
-//#define KEY1 HAL_GPIO_ReadPin(GPIOH,GPIO_PIN_2) //KEY1 按键 PH2
+#define KEY0 HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_5) //KEY0 按键 PC5
+#define KEY1 HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_15) //KEY1 按键 PA15
 #define KEY2 HAL_GPIO_ReadPin(GPIOC,GPIO_PIN_13) //KEY2 按键 PC13     ---->对应NUCLEO-L476中的USER键
 #define WK_UP HAL_GPIO_ReadPin(GPIOA,GPIO_PIN_0) //WKUP 按键 PA0
 ///*下面的方式是通过位带操作方式读取 IO*/
@@ -30,7 +30,8 @@
 //#define KEY1 PHin(2) //KEY1 按键 PH2
 //#define KEY2 PCin(13)//KEY2 按键 PC13
 //#define WK_UP PAin(0) //WKUP 按键 PA0
-
+#define KEY0_PRES 0
+#define KEY1_PRES 1
 #define KEY2_PRES 3
 #define WKUP_PRES 4  
 

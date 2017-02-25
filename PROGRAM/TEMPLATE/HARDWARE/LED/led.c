@@ -33,7 +33,7 @@ void LED_Init(void)
     GPIO_Initure.Speed=GPIO_SPEED_HIGH;     //高速
     HAL_GPIO_Init(GPIOD,&GPIO_Initure);
 	
-    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_RESET);	//PA5置0，默认初始化后灯灭
-    HAL_GPIO_WritePin(GPIOD,GPIO_PIN_2,GPIO_PIN_RESET);	//PA6置0，默认初始化后灯灭
+    HAL_GPIO_WritePin(GPIOA,GPIO_PIN_8,GPIO_PIN_SET);	//PA5置0，默认初始化后灯灭
+    HAL_GPIO_WritePin(GPIOD,GPIO_PIN_2,GPIO_PIN_SET);	//PA6置0，默认初始化后灯灭
 }
  

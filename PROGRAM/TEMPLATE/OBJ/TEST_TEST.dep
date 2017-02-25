@@ -1,5 +1,5 @@
 Dependencies for Project 'TEST', Target 'TEST': (DO NOT MODIFY !)
-F (.\main.c)(0x58AFE18A)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
+F (.\main.c)(0x58B147A8)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\main.o --omf_browse ..\obj\main.crf --depend ..\obj\main.d)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
 I (..\USER\stm32l476xx.h)(0x586CC980)
@@ -69,16 +69,12 @@ I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
 I (..\SYSTEM\usart\usart.h)(0x58AECA3A)
 I (..\HARDWARE\LED\led.h)(0x58AEC712)
-I (..\HARDWARE\KEY\key.h)(0x58777C93)
+I (..\HARDWARE\KEY\key.h)(0x58B133E0)
 I (..\USMART\usmart.h)(0x575F7A44)
 I (..\USMART\usmart_str.h)(0x575F7A22)
 I (..\HARDWARE\RTC\RTC.h)(0x5710F96D)
-I (..\HARDWARE\ADC\adc.h)(0x58983C41)
-I (..\HARDWARE\DAC\dac.h)(0x589AE61A)
-I (..\HARDWARE\LCD\tft24.h)(0x58AFD813)
-I (..\HARDWARE\LCD\font.h)(0x588AE9EE)
-I (..\HARDWARE\LCD\pic.h)(0x588AE22C)
-F (.\stm32l4xx_hal_msp.c)(0x586CC9E6)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_msp.o --omf_browse ..\obj\stm32l4xx_hal_msp.crf --depend ..\obj\stm32l4xx_hal_msp.d)
+I (..\HARDWARE\W25QXX\w25qxx.h)(0x58B14761)
+F (.\stm32l4xx_hal_msp.c)(0x586CC9E6)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_msp.o --omf_browse ..\obj\stm32l4xx_hal_msp.crf --depend ..\obj\stm32l4xx_hal_msp.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -144,7 +140,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (.\stm32l4xx_it.c)(0x586CC9E6)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_it.o --omf_browse ..\obj\stm32l4xx_it.crf --depend ..\obj\stm32l4xx_it.d)
+F (.\stm32l4xx_it.c)(0x586CC9E6)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_it.o --omf_browse ..\obj\stm32l4xx_it.crf --depend ..\obj\stm32l4xx_it.d)
 I (main.h)(0x587620ED)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
@@ -212,7 +208,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (stm32l4xx_it.h)(0x586CC9E6)
-F (.\system_stm32l4xx.c)(0x58773B26)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\system_stm32l4xx.o --omf_browse ..\obj\system_stm32l4xx.crf --depend ..\obj\system_stm32l4xx.d)
+F (.\system_stm32l4xx.c)(0x58773B26)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\system_stm32l4xx.o --omf_browse ..\obj\system_stm32l4xx.crf --depend ..\obj\system_stm32l4xx.d)
 I (stm32l4xx.h)(0x586CC980)
 I (stm32l476xx.h)(0x586CC980)
 I (..\CORE\core_cm4.h)(0x586CC981)
@@ -285,7 +281,7 @@ F (..\CORE\core_cmFunc.h)(0x586CC981)()
 F (..\CORE\core_cmInstr.h)(0x586CC981)()
 F (..\CORE\core_cmSimd.h)(0x586CC981)()
 F (..\CORE\startup_stm32l476xx.s)(0x586CC980)(--cpu Cortex-M4.fp -g --apcs=interwork -I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"--pd "__UVISION_VERSION SETA 523" --pd "STM32L476xx SETA 1"--list .\listings\startup_stm32l476xx.lst --xref -o ..\obj\startup_stm32l476xx.o --depend ..\obj\startup_stm32l476xx.d)
-F (..\HALLIB\Src\stm32l4xx_hal.c)(0x58761CB6)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal.o --omf_browse ..\obj\stm32l4xx_hal.crf --depend ..\obj\stm32l4xx_hal.d)
+F (..\HALLIB\Src\stm32l4xx_hal.c)(0x58761CB6)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal.o --omf_browse ..\obj\stm32l4xx_hal.crf --depend ..\obj\stm32l4xx_hal.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -351,7 +347,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_gpio.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_gpio.o --omf_browse ..\obj\stm32l4xx_hal_gpio.crf --depend ..\obj\stm32l4xx_hal_gpio.d)
+F (..\HALLIB\Src\stm32l4xx_hal_gpio.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_gpio.o --omf_browse ..\obj\stm32l4xx_hal_gpio.crf --depend ..\obj\stm32l4xx_hal_gpio.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -417,7 +413,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_uart.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_uart.o --omf_browse ..\obj\stm32l4xx_hal_uart.crf --depend ..\obj\stm32l4xx_hal_uart.d)
+F (..\HALLIB\Src\stm32l4xx_hal_uart.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_uart.o --omf_browse ..\obj\stm32l4xx_hal_uart.crf --depend ..\obj\stm32l4xx_hal_uart.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -483,7 +479,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_usart.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_usart.o --omf_browse ..\obj\stm32l4xx_hal_usart.crf --depend ..\obj\stm32l4xx_hal_usart.d)
+F (..\HALLIB\Src\stm32l4xx_hal_usart.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_usart.o --omf_browse ..\obj\stm32l4xx_hal_usart.crf --depend ..\obj\stm32l4xx_hal_usart.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -549,7 +545,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_rcc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rcc.o --omf_browse ..\obj\stm32l4xx_hal_rcc.crf --depend ..\obj\stm32l4xx_hal_rcc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_rcc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rcc.o --omf_browse ..\obj\stm32l4xx_hal_rcc.crf --depend ..\obj\stm32l4xx_hal_rcc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -615,7 +611,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_adc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_adc.o --omf_browse ..\obj\stm32l4xx_hal_adc.crf --depend ..\obj\stm32l4xx_hal_adc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_adc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_adc.o --omf_browse ..\obj\stm32l4xx_hal_adc.crf --depend ..\obj\stm32l4xx_hal_adc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -681,7 +677,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_adc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_adc_ex.o --omf_browse ..\obj\stm32l4xx_hal_adc_ex.crf --depend ..\obj\stm32l4xx_hal_adc_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_adc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_adc_ex.o --omf_browse ..\obj\stm32l4xx_hal_adc_ex.crf --depend ..\obj\stm32l4xx_hal_adc_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -747,7 +743,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_can.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_can.o --omf_browse ..\obj\stm32l4xx_hal_can.crf --depend ..\obj\stm32l4xx_hal_can.d)
+F (..\HALLIB\Src\stm32l4xx_hal_can.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_can.o --omf_browse ..\obj\stm32l4xx_hal_can.crf --depend ..\obj\stm32l4xx_hal_can.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -813,7 +809,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_comp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_comp.o --omf_browse ..\obj\stm32l4xx_hal_comp.crf --depend ..\obj\stm32l4xx_hal_comp.d)
+F (..\HALLIB\Src\stm32l4xx_hal_comp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_comp.o --omf_browse ..\obj\stm32l4xx_hal_comp.crf --depend ..\obj\stm32l4xx_hal_comp.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -879,7 +875,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_cortex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cortex.o --omf_browse ..\obj\stm32l4xx_hal_cortex.crf --depend ..\obj\stm32l4xx_hal_cortex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_cortex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cortex.o --omf_browse ..\obj\stm32l4xx_hal_cortex.crf --depend ..\obj\stm32l4xx_hal_cortex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -945,7 +941,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_crc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_crc.o --omf_browse ..\obj\stm32l4xx_hal_crc.crf --depend ..\obj\stm32l4xx_hal_crc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_crc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_crc.o --omf_browse ..\obj\stm32l4xx_hal_crc.crf --depend ..\obj\stm32l4xx_hal_crc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1011,7 +1007,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_crc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_crc_ex.o --omf_browse ..\obj\stm32l4xx_hal_crc_ex.crf --depend ..\obj\stm32l4xx_hal_crc_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_crc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_crc_ex.o --omf_browse ..\obj\stm32l4xx_hal_crc_ex.crf --depend ..\obj\stm32l4xx_hal_crc_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1077,7 +1073,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_cryp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cryp.o --omf_browse ..\obj\stm32l4xx_hal_cryp.crf --depend ..\obj\stm32l4xx_hal_cryp.d)
+F (..\HALLIB\Src\stm32l4xx_hal_cryp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cryp.o --omf_browse ..\obj\stm32l4xx_hal_cryp.crf --depend ..\obj\stm32l4xx_hal_cryp.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1143,7 +1139,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_cryp_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cryp_ex.o --omf_browse ..\obj\stm32l4xx_hal_cryp_ex.crf --depend ..\obj\stm32l4xx_hal_cryp_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_cryp_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_cryp_ex.o --omf_browse ..\obj\stm32l4xx_hal_cryp_ex.crf --depend ..\obj\stm32l4xx_hal_cryp_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1209,7 +1205,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_dac.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dac.o --omf_browse ..\obj\stm32l4xx_hal_dac.crf --depend ..\obj\stm32l4xx_hal_dac.d)
+F (..\HALLIB\Src\stm32l4xx_hal_dac.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dac.o --omf_browse ..\obj\stm32l4xx_hal_dac.crf --depend ..\obj\stm32l4xx_hal_dac.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1275,7 +1271,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_dac_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dac_ex.o --omf_browse ..\obj\stm32l4xx_hal_dac_ex.crf --depend ..\obj\stm32l4xx_hal_dac_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_dac_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dac_ex.o --omf_browse ..\obj\stm32l4xx_hal_dac_ex.crf --depend ..\obj\stm32l4xx_hal_dac_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1341,7 +1337,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_dfsdm.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dfsdm.o --omf_browse ..\obj\stm32l4xx_hal_dfsdm.crf --depend ..\obj\stm32l4xx_hal_dfsdm.d)
+F (..\HALLIB\Src\stm32l4xx_hal_dfsdm.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dfsdm.o --omf_browse ..\obj\stm32l4xx_hal_dfsdm.crf --depend ..\obj\stm32l4xx_hal_dfsdm.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1407,7 +1403,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_dma.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dma.o --omf_browse ..\obj\stm32l4xx_hal_dma.crf --depend ..\obj\stm32l4xx_hal_dma.d)
+F (..\HALLIB\Src\stm32l4xx_hal_dma.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_dma.o --omf_browse ..\obj\stm32l4xx_hal_dma.crf --depend ..\obj\stm32l4xx_hal_dma.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1473,7 +1469,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_firewall.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_firewall.o --omf_browse ..\obj\stm32l4xx_hal_firewall.crf --depend ..\obj\stm32l4xx_hal_firewall.d)
+F (..\HALLIB\Src\stm32l4xx_hal_firewall.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_firewall.o --omf_browse ..\obj\stm32l4xx_hal_firewall.crf --depend ..\obj\stm32l4xx_hal_firewall.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1539,7 +1535,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_flash.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash.o --omf_browse ..\obj\stm32l4xx_hal_flash.crf --depend ..\obj\stm32l4xx_hal_flash.d)
+F (..\HALLIB\Src\stm32l4xx_hal_flash.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash.o --omf_browse ..\obj\stm32l4xx_hal_flash.crf --depend ..\obj\stm32l4xx_hal_flash.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1605,7 +1601,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_flash_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash_ex.o --omf_browse ..\obj\stm32l4xx_hal_flash_ex.crf --depend ..\obj\stm32l4xx_hal_flash_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_flash_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash_ex.o --omf_browse ..\obj\stm32l4xx_hal_flash_ex.crf --depend ..\obj\stm32l4xx_hal_flash_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1671,7 +1667,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_flash_ramfunc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash_ramfunc.o --omf_browse ..\obj\stm32l4xx_hal_flash_ramfunc.crf --depend ..\obj\stm32l4xx_hal_flash_ramfunc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_flash_ramfunc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_flash_ramfunc.o --omf_browse ..\obj\stm32l4xx_hal_flash_ramfunc.crf --depend ..\obj\stm32l4xx_hal_flash_ramfunc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1737,7 +1733,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_hcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_hcd.o --omf_browse ..\obj\stm32l4xx_hal_hcd.crf --depend ..\obj\stm32l4xx_hal_hcd.d)
+F (..\HALLIB\Src\stm32l4xx_hal_hcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_hcd.o --omf_browse ..\obj\stm32l4xx_hal_hcd.crf --depend ..\obj\stm32l4xx_hal_hcd.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1803,7 +1799,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_i2c.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_i2c.o --omf_browse ..\obj\stm32l4xx_hal_i2c.crf --depend ..\obj\stm32l4xx_hal_i2c.d)
+F (..\HALLIB\Src\stm32l4xx_hal_i2c.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_i2c.o --omf_browse ..\obj\stm32l4xx_hal_i2c.crf --depend ..\obj\stm32l4xx_hal_i2c.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1869,7 +1865,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_i2c_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_i2c_ex.o --omf_browse ..\obj\stm32l4xx_hal_i2c_ex.crf --depend ..\obj\stm32l4xx_hal_i2c_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_i2c_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_i2c_ex.o --omf_browse ..\obj\stm32l4xx_hal_i2c_ex.crf --depend ..\obj\stm32l4xx_hal_i2c_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -1935,7 +1931,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_irda.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_irda.o --omf_browse ..\obj\stm32l4xx_hal_irda.crf --depend ..\obj\stm32l4xx_hal_irda.d)
+F (..\HALLIB\Src\stm32l4xx_hal_irda.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_irda.o --omf_browse ..\obj\stm32l4xx_hal_irda.crf --depend ..\obj\stm32l4xx_hal_irda.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2001,7 +1997,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_iwdg.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_iwdg.o --omf_browse ..\obj\stm32l4xx_hal_iwdg.crf --depend ..\obj\stm32l4xx_hal_iwdg.d)
+F (..\HALLIB\Src\stm32l4xx_hal_iwdg.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_iwdg.o --omf_browse ..\obj\stm32l4xx_hal_iwdg.crf --depend ..\obj\stm32l4xx_hal_iwdg.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2067,7 +2063,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_lcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_lcd.o --omf_browse ..\obj\stm32l4xx_hal_lcd.crf --depend ..\obj\stm32l4xx_hal_lcd.d)
+F (..\HALLIB\Src\stm32l4xx_hal_lcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_lcd.o --omf_browse ..\obj\stm32l4xx_hal_lcd.crf --depend ..\obj\stm32l4xx_hal_lcd.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2133,7 +2129,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_lptim.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_lptim.o --omf_browse ..\obj\stm32l4xx_hal_lptim.crf --depend ..\obj\stm32l4xx_hal_lptim.d)
+F (..\HALLIB\Src\stm32l4xx_hal_lptim.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_lptim.o --omf_browse ..\obj\stm32l4xx_hal_lptim.crf --depend ..\obj\stm32l4xx_hal_lptim.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2199,7 +2195,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_nand.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_nand.o --omf_browse ..\obj\stm32l4xx_hal_nand.crf --depend ..\obj\stm32l4xx_hal_nand.d)
+F (..\HALLIB\Src\stm32l4xx_hal_nand.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_nand.o --omf_browse ..\obj\stm32l4xx_hal_nand.crf --depend ..\obj\stm32l4xx_hal_nand.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2265,7 +2261,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_nor.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_nor.o --omf_browse ..\obj\stm32l4xx_hal_nor.crf --depend ..\obj\stm32l4xx_hal_nor.d)
+F (..\HALLIB\Src\stm32l4xx_hal_nor.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_nor.o --omf_browse ..\obj\stm32l4xx_hal_nor.crf --depend ..\obj\stm32l4xx_hal_nor.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2331,7 +2327,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_opamp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_opamp.o --omf_browse ..\obj\stm32l4xx_hal_opamp.crf --depend ..\obj\stm32l4xx_hal_opamp.d)
+F (..\HALLIB\Src\stm32l4xx_hal_opamp.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_opamp.o --omf_browse ..\obj\stm32l4xx_hal_opamp.crf --depend ..\obj\stm32l4xx_hal_opamp.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2397,7 +2393,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_opamp_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_opamp_ex.o --omf_browse ..\obj\stm32l4xx_hal_opamp_ex.crf --depend ..\obj\stm32l4xx_hal_opamp_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_opamp_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_opamp_ex.o --omf_browse ..\obj\stm32l4xx_hal_opamp_ex.crf --depend ..\obj\stm32l4xx_hal_opamp_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2463,7 +2459,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_pcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pcd.o --omf_browse ..\obj\stm32l4xx_hal_pcd.crf --depend ..\obj\stm32l4xx_hal_pcd.d)
+F (..\HALLIB\Src\stm32l4xx_hal_pcd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pcd.o --omf_browse ..\obj\stm32l4xx_hal_pcd.crf --depend ..\obj\stm32l4xx_hal_pcd.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2529,7 +2525,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_pcd_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pcd_ex.o --omf_browse ..\obj\stm32l4xx_hal_pcd_ex.crf --depend ..\obj\stm32l4xx_hal_pcd_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_pcd_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pcd_ex.o --omf_browse ..\obj\stm32l4xx_hal_pcd_ex.crf --depend ..\obj\stm32l4xx_hal_pcd_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2595,7 +2591,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_pwr.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pwr.o --omf_browse ..\obj\stm32l4xx_hal_pwr.crf --depend ..\obj\stm32l4xx_hal_pwr.d)
+F (..\HALLIB\Src\stm32l4xx_hal_pwr.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pwr.o --omf_browse ..\obj\stm32l4xx_hal_pwr.crf --depend ..\obj\stm32l4xx_hal_pwr.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2661,7 +2657,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_pwr_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pwr_ex.o --omf_browse ..\obj\stm32l4xx_hal_pwr_ex.crf --depend ..\obj\stm32l4xx_hal_pwr_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_pwr_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_pwr_ex.o --omf_browse ..\obj\stm32l4xx_hal_pwr_ex.crf --depend ..\obj\stm32l4xx_hal_pwr_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2727,7 +2723,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_qspi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_qspi.o --omf_browse ..\obj\stm32l4xx_hal_qspi.crf --depend ..\obj\stm32l4xx_hal_qspi.d)
+F (..\HALLIB\Src\stm32l4xx_hal_qspi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_qspi.o --omf_browse ..\obj\stm32l4xx_hal_qspi.crf --depend ..\obj\stm32l4xx_hal_qspi.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2793,7 +2789,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_rcc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rcc_ex.o --omf_browse ..\obj\stm32l4xx_hal_rcc_ex.crf --depend ..\obj\stm32l4xx_hal_rcc_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_rcc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rcc_ex.o --omf_browse ..\obj\stm32l4xx_hal_rcc_ex.crf --depend ..\obj\stm32l4xx_hal_rcc_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2859,7 +2855,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_rng.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rng.o --omf_browse ..\obj\stm32l4xx_hal_rng.crf --depend ..\obj\stm32l4xx_hal_rng.d)
+F (..\HALLIB\Src\stm32l4xx_hal_rng.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rng.o --omf_browse ..\obj\stm32l4xx_hal_rng.crf --depend ..\obj\stm32l4xx_hal_rng.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2925,7 +2921,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_rtc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rtc.o --omf_browse ..\obj\stm32l4xx_hal_rtc.crf --depend ..\obj\stm32l4xx_hal_rtc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_rtc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rtc.o --omf_browse ..\obj\stm32l4xx_hal_rtc.crf --depend ..\obj\stm32l4xx_hal_rtc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -2991,7 +2987,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_rtc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rtc_ex.o --omf_browse ..\obj\stm32l4xx_hal_rtc_ex.crf --depend ..\obj\stm32l4xx_hal_rtc_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_rtc_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_rtc_ex.o --omf_browse ..\obj\stm32l4xx_hal_rtc_ex.crf --depend ..\obj\stm32l4xx_hal_rtc_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3057,7 +3053,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_sai.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sai.o --omf_browse ..\obj\stm32l4xx_hal_sai.crf --depend ..\obj\stm32l4xx_hal_sai.d)
+F (..\HALLIB\Src\stm32l4xx_hal_sai.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sai.o --omf_browse ..\obj\stm32l4xx_hal_sai.crf --depend ..\obj\stm32l4xx_hal_sai.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3123,7 +3119,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_sd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sd.o --omf_browse ..\obj\stm32l4xx_hal_sd.crf --depend ..\obj\stm32l4xx_hal_sd.d)
+F (..\HALLIB\Src\stm32l4xx_hal_sd.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sd.o --omf_browse ..\obj\stm32l4xx_hal_sd.crf --depend ..\obj\stm32l4xx_hal_sd.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3189,7 +3185,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_smartcard.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smartcard.o --omf_browse ..\obj\stm32l4xx_hal_smartcard.crf --depend ..\obj\stm32l4xx_hal_smartcard.d)
+F (..\HALLIB\Src\stm32l4xx_hal_smartcard.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smartcard.o --omf_browse ..\obj\stm32l4xx_hal_smartcard.crf --depend ..\obj\stm32l4xx_hal_smartcard.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3255,7 +3251,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_smartcard_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smartcard_ex.o --omf_browse ..\obj\stm32l4xx_hal_smartcard_ex.crf --depend ..\obj\stm32l4xx_hal_smartcard_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_smartcard_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smartcard_ex.o --omf_browse ..\obj\stm32l4xx_hal_smartcard_ex.crf --depend ..\obj\stm32l4xx_hal_smartcard_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3321,7 +3317,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_smbus.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smbus.o --omf_browse ..\obj\stm32l4xx_hal_smbus.crf --depend ..\obj\stm32l4xx_hal_smbus.d)
+F (..\HALLIB\Src\stm32l4xx_hal_smbus.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_smbus.o --omf_browse ..\obj\stm32l4xx_hal_smbus.crf --depend ..\obj\stm32l4xx_hal_smbus.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3387,7 +3383,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_spi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_spi.o --omf_browse ..\obj\stm32l4xx_hal_spi.crf --depend ..\obj\stm32l4xx_hal_spi.d)
+F (..\HALLIB\Src\stm32l4xx_hal_spi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_spi.o --omf_browse ..\obj\stm32l4xx_hal_spi.crf --depend ..\obj\stm32l4xx_hal_spi.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3453,7 +3449,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_spi_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_spi_ex.o --omf_browse ..\obj\stm32l4xx_hal_spi_ex.crf --depend ..\obj\stm32l4xx_hal_spi_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_spi_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_spi_ex.o --omf_browse ..\obj\stm32l4xx_hal_spi_ex.crf --depend ..\obj\stm32l4xx_hal_spi_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3519,7 +3515,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_sram.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sram.o --omf_browse ..\obj\stm32l4xx_hal_sram.crf --depend ..\obj\stm32l4xx_hal_sram.d)
+F (..\HALLIB\Src\stm32l4xx_hal_sram.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_sram.o --omf_browse ..\obj\stm32l4xx_hal_sram.crf --depend ..\obj\stm32l4xx_hal_sram.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3585,7 +3581,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_swpmi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_swpmi.o --omf_browse ..\obj\stm32l4xx_hal_swpmi.crf --depend ..\obj\stm32l4xx_hal_swpmi.d)
+F (..\HALLIB\Src\stm32l4xx_hal_swpmi.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_swpmi.o --omf_browse ..\obj\stm32l4xx_hal_swpmi.crf --depend ..\obj\stm32l4xx_hal_swpmi.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3651,7 +3647,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_tim.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tim.o --omf_browse ..\obj\stm32l4xx_hal_tim.crf --depend ..\obj\stm32l4xx_hal_tim.d)
+F (..\HALLIB\Src\stm32l4xx_hal_tim.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tim.o --omf_browse ..\obj\stm32l4xx_hal_tim.crf --depend ..\obj\stm32l4xx_hal_tim.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3717,7 +3713,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_tim_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tim_ex.o --omf_browse ..\obj\stm32l4xx_hal_tim_ex.crf --depend ..\obj\stm32l4xx_hal_tim_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_tim_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tim_ex.o --omf_browse ..\obj\stm32l4xx_hal_tim_ex.crf --depend ..\obj\stm32l4xx_hal_tim_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3783,7 +3779,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_tsc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tsc.o --omf_browse ..\obj\stm32l4xx_hal_tsc.crf --depend ..\obj\stm32l4xx_hal_tsc.d)
+F (..\HALLIB\Src\stm32l4xx_hal_tsc.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_tsc.o --omf_browse ..\obj\stm32l4xx_hal_tsc.crf --depend ..\obj\stm32l4xx_hal_tsc.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3849,7 +3845,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_uart_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_uart_ex.o --omf_browse ..\obj\stm32l4xx_hal_uart_ex.crf --depend ..\obj\stm32l4xx_hal_uart_ex.d)
+F (..\HALLIB\Src\stm32l4xx_hal_uart_ex.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_uart_ex.o --omf_browse ..\obj\stm32l4xx_hal_uart_ex.crf --depend ..\obj\stm32l4xx_hal_uart_ex.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3915,7 +3911,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HALLIB\Src\stm32l4xx_hal_wwdg.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_wwdg.o --omf_browse ..\obj\stm32l4xx_hal_wwdg.crf --depend ..\obj\stm32l4xx_hal_wwdg.d)
+F (..\HALLIB\Src\stm32l4xx_hal_wwdg.c)(0x586CC983)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\stm32l4xx_hal_wwdg.o --omf_browse ..\obj\stm32l4xx_hal_wwdg.crf --depend ..\obj\stm32l4xx_hal_wwdg.d)
 I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
 I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
 I (..\USER\main.h)(0x587620ED)
@@ -3981,7 +3977,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\SYSTEM\sys\sys.c)(0x5876283E)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
+F (..\SYSTEM\sys\sys.c)(0x5876283E)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\sys.o --omf_browse ..\obj\sys.crf --depend ..\obj\sys.d)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
 I (..\USER\stm32l476xx.h)(0x586CC980)
@@ -4048,7 +4044,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\SYSTEM\delay\delay.c)(0x587828C6)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
+F (..\SYSTEM\delay\delay.c)(0x587828C6)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\delay.o --omf_browse ..\obj\delay.crf --depend ..\obj\delay.d)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4116,7 +4112,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\SYSTEM\usart\usart.c)(0x58AECA56)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
+F (..\SYSTEM\usart\usart.c)(0x58AECA56)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usart.o --omf_browse ..\obj\usart.crf --depend ..\obj\usart.d)
 I (..\SYSTEM\usart\usart.h)(0x58AECA3A)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4185,7 +4181,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
-F (..\HARDWARE\LED\led.c)(0x58AECB13)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
+F (..\HARDWARE\LED\led.c)(0x58B13DD0)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\led.o --omf_browse ..\obj\led.crf --depend ..\obj\led.d)
 I (..\HARDWARE\LED\led.h)(0x58AEC712)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4253,8 +4249,8 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HARDWARE\KEY\key.c)(0x58777DA7)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
-I (..\HARDWARE\KEY\key.h)(0x58777C93)
+F (..\HARDWARE\KEY\key.c)(0x58B13480)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\key.o --omf_browse ..\obj\key.crf --depend ..\obj\key.d)
+I (..\HARDWARE\KEY\key.h)(0x58B133E0)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
 I (..\USER\stm32l476xx.h)(0x586CC980)
@@ -4322,7 +4318,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
-F (..\HARDWARE\EXTI\exti.c)(0x5880B41A)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
+F (..\HARDWARE\EXTI\exti.c)(0x5880B41A)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\exti.o --omf_browse ..\obj\exti.crf --depend ..\obj\exti.d)
 I (..\HARDWARE\EXTI\exti.h)(0x5710F9A5)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4392,8 +4388,8 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
 I (..\HARDWARE\LED\led.h)(0x58AEC712)
-I (..\HARDWARE\KEY\key.h)(0x58777C93)
-F (..\HARDWARE\TIMER\timer.c)(0x5881850B)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
+I (..\HARDWARE\KEY\key.h)(0x58B133E0)
+F (..\HARDWARE\TIMER\timer.c)(0x5881850B)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\timer.o --omf_browse ..\obj\timer.crf --depend ..\obj\timer.d)
 I (..\HARDWARE\TIMER\timer.h)(0x5881851A)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4462,7 +4458,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\HARDWARE\LED\led.h)(0x58AEC712)
-F (..\HARDWARE\RTC\rtc.c)(0x5885A9AB)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\rtc.o --omf_browse ..\obj\rtc.crf --depend ..\obj\rtc.d)
+F (..\HARDWARE\RTC\rtc.c)(0x5885A9AB)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\rtc.o --omf_browse ..\obj\rtc.crf --depend ..\obj\rtc.d)
 I (..\HARDWARE\RTC\rtc.h)(0x5710F96D)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4532,7 +4528,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
 I (..\HARDWARE\LED\led.h)(0x58AEC712)
-F (..\HARDWARE\ADC\adc.c)(0x589AE61A)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
+F (..\HARDWARE\ADC\adc.c)(0x589AE61A)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\adc.o --omf_browse ..\obj\adc.crf --depend ..\obj\adc.d)
 I (..\HARDWARE\ADC\adc.h)(0x58983C41)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4601,7 +4597,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
-F (..\HARDWARE\DAC\dac.c)(0x589AE61A)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\dac.o --omf_browse ..\obj\dac.crf --depend ..\obj\dac.d)
+F (..\HARDWARE\DAC\dac.c)(0x589AE61A)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\dac.o --omf_browse ..\obj\dac.crf --depend ..\obj\dac.d)
 I (..\HARDWARE\DAC\dac.h)(0x589AE61A)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
@@ -4669,7 +4665,79 @@ I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
-F (..\HARDWARE\LCD\lcd.c)(0x58AFE385)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\lcd.o --omf_browse ..\obj\lcd.crf --depend ..\obj\lcd.d)
+F (..\HARDWARE\24CXX\24cxx.c)(0x575F9EC1)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\24cxx.o --omf_browse ..\obj\24cxx.crf --depend ..\obj\24cxx.d)
+I (..\HARDWARE\24CXX\24cxx.h)(0x5710F979)
+I (..\SYSTEM\sys\sys.h)(0x5876283E)
+I (..\USER\stm32l4xx.h)(0x586CC980)
+I (..\USER\stm32l476xx.h)(0x586CC980)
+I (..\CORE\core_cm4.h)(0x586CC981)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\CORE\core_cmInstr.h)(0x586CC981)
+I (..\CORE\cmsis_armcc.h)(0x586CC981)
+I (..\CORE\core_cmFunc.h)(0x586CC981)
+I (..\CORE\core_cmSimd.h)(0x586CC981)
+I (..\USER\system_stm32l4xx.h)(0x586CC980)
+I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
+I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
+I (..\USER\main.h)(0x587620ED)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_def.h)(0x586CC983)
+I (..\HALLIB\Inc\Legacy/stm32_hal_legacy.h)(0x586CC983)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dma.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dfsdm.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cortex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_can.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_comp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cryp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_firewall.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_iwdg.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lcd.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lptim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_qspi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rng.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_sai.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smbus.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_swpmi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tsc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
+I (..\HARDWARE\IIC\myiic.h)(0x58B13713)
+I (..\SYSTEM\delay\delay.h)(0x5746C111)
+F (..\HARDWARE\IIC\myiic.c)(0x58B13646)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\myiic.o --omf_browse ..\obj\myiic.crf --depend ..\obj\myiic.d)
+I (..\HARDWARE\IIC\myiic.h)(0x58B13713)
+I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)
 I (..\USER\stm32l476xx.h)(0x586CC980)
 I (..\CORE\core_cm4.h)(0x586CC981)
@@ -4736,9 +4804,146 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
+F (..\HARDWARE\SPI\spi.c)(0x58B141C6)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\spi.o --omf_browse ..\obj\spi.crf --depend ..\obj\spi.d)
+I (..\HARDWARE\SPI\spi.h)(0x58B141C6)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
-I (..\HARDWARE\LCD\tft24.h)(0x58AFD813)
-F (..\USMART\usmart.c)(0x576BA916)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart.o --omf_browse ..\obj\usmart.crf --depend ..\obj\usmart.d)
+I (..\USER\stm32l4xx.h)(0x586CC980)
+I (..\USER\stm32l476xx.h)(0x586CC980)
+I (..\CORE\core_cm4.h)(0x586CC981)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\CORE\core_cmInstr.h)(0x586CC981)
+I (..\CORE\cmsis_armcc.h)(0x586CC981)
+I (..\CORE\core_cmFunc.h)(0x586CC981)
+I (..\CORE\core_cmSimd.h)(0x586CC981)
+I (..\USER\system_stm32l4xx.h)(0x586CC980)
+I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
+I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
+I (..\USER\main.h)(0x587620ED)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_def.h)(0x586CC983)
+I (..\HALLIB\Inc\Legacy/stm32_hal_legacy.h)(0x586CC983)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dma.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dfsdm.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cortex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_can.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_comp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cryp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_firewall.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_iwdg.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lcd.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lptim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_qspi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rng.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_sai.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smbus.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_swpmi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tsc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
+F (..\HARDWARE\W25QXX\w25qxx.c)(0x58B14761)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\w25qxx.o --omf_browse ..\obj\w25qxx.crf --depend ..\obj\w25qxx.d)
+I (..\HARDWARE\W25QXX\w25qxx.h)(0x58B14761)
+I (..\SYSTEM\sys\sys.h)(0x5876283E)
+I (..\USER\stm32l4xx.h)(0x586CC980)
+I (..\USER\stm32l476xx.h)(0x586CC980)
+I (..\CORE\core_cm4.h)(0x586CC981)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (..\CORE\core_cmInstr.h)(0x586CC981)
+I (..\CORE\cmsis_armcc.h)(0x586CC981)
+I (..\CORE\core_cmFunc.h)(0x586CC981)
+I (..\CORE\core_cmSimd.h)(0x586CC981)
+I (..\USER\system_stm32l4xx.h)(0x586CC980)
+I (..\HALLIB\Inc\stm32l4xx_hal.h)(0x586CC983)
+I (..\USER\stm32l4xx_hal_conf.h)(0x58817803)
+I (..\USER\main.h)(0x587620ED)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_def.h)(0x586CC983)
+I (..\HALLIB\Inc\Legacy/stm32_hal_legacy.h)(0x586CC983)
+I (D:\keil for arm v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (..\HALLIB\Inc\stm32l4xx_hal_rcc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_gpio_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dma.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dfsdm.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cortex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_adc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_can.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_comp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_crc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_cryp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_dac_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_firewall.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_flash_ramfunc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_i2c_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_iwdg.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lcd.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_lptim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_opamp_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_pwr_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_qspi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rng.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_rtc_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_sai.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smbus.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_spi_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_swpmi.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tim_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_tsc.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_uart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_usart_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_irda_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
+I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
+I (..\HARDWARE\SPI\spi.h)(0x58B141C6)
+I (..\SYSTEM\delay\delay.h)(0x5746C111)
+I (..\SYSTEM\usart\usart.h)(0x58AECA3A)
+F (..\USMART\usmart.c)(0x576BA916)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart.o --omf_browse ..\obj\usmart.crf --depend ..\obj\usmart.d)
 I (..\USMART\usmart.h)(0x575F7A44)
 I (..\USMART\usmart_str.h)(0x575F7A22)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
@@ -4808,7 +5013,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\usart\usart.h)(0x58AECA3A)
-F (..\USMART\usmart_config.c)(0x5885A89C)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart_config.o --omf_browse ..\obj\usmart_config.crf --depend ..\obj\usmart_config.d)
+F (..\USMART\usmart_config.c)(0x5885A89C)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart_config.o --omf_browse ..\obj\usmart_config.crf --depend ..\obj\usmart_config.d)
 I (..\USMART\usmart.h)(0x575F7A44)
 I (..\USMART\usmart_str.h)(0x575F7A22)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
@@ -4879,7 +5084,7 @@ I (..\HALLIB\Inc\stm32l4xx_hal_smartcard_ex.h)(0x586CC983)
 I (..\HALLIB\Inc\stm32l4xx_hal_wwdg.h)(0x586CC983)
 I (..\SYSTEM\delay\delay.h)(0x5746C111)
 I (..\HARDWARE\RTC\rtc.h)(0x5710F96D)
-F (..\USMART\usmart_str.c)(0x575F7A12)(-c --cpu Cortex-M4.fp -g -O3 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart_str.o --omf_browse ..\obj\usmart_str.crf --depend ..\obj\usmart_str.d)
+F (..\USMART\usmart_str.c)(0x575F7A12)(-c --cpu Cortex-M4.fp -g -O2 --apcs=interwork --split_sections -I ..\CORE -I ..\OBJ -I ..\USER -I ..\HALLIB\Inc -I ..\SYSTEM\delay -I ..\SYSTEM\sys -I ..\SYSTEM\usart -I ..\HARDWARE\KEY -I ..\HARDWARE\LED -I ..\HARDWARE\EXTI -I ..\HARDWARE\TIMER -I ..\USMART -I ..\HARDWARE\RTC -I ..\HARDWARE\ADC -I ..\HARDWARE\DAC -I ..\HARDWARE\LCD -I ..\HARDWARE\24CXX -I ..\HARDWARE\IIC -I ..\HARDWARE\SPI -I ..\HARDWARE\W25QXX-I.\RTE\_TEST-I"D:\keil for arm v5\PACK\Keil\STM32L4xx_DFP\1.3.0\Device\Include"-I"D:\keil for arm v5\ARM\CMSIS\Include"-D__UVISION_VERSION="523" -DSTM32L476xx -DUSE_HAL_DRIVER -DSTM32L476xx-o ..\obj\usmart_str.o --omf_browse ..\obj\usmart_str.crf --depend ..\obj\usmart_str.d)
 I (..\USMART\usmart_str.h)(0x575F7A22)
 I (..\SYSTEM\sys\sys.h)(0x5876283E)
 I (..\USER\stm32l4xx.h)(0x586CC980)

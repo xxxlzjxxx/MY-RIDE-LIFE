@@ -22,11 +22,17 @@ void KEY_Init(void)
     __HAL_RCC_GPIOA_CLK_ENABLE(); //开启 GPIOA 时钟
     __HAL_RCC_GPIOC_CLK_ENABLE(); //开启 GPIOC 时钟
     
-    GPIO_Initure.Pin=GPIO_PIN_0; //PA0
+    GPIO_Initure.Pin=GPIO_PIN_0 | GPIO_PIN_15; //PA0
     GPIO_Initure.Mode=GPIO_MODE_INPUT; //输入
     GPIO_Initure.Pull=GPIO_PULLDOWN; //下拉
     GPIO_Initure.Speed=GPIO_SPEED_HIGH; //高速
     HAL_GPIO_Init(GPIOA,&GPIO_Initure);
+    
+    GPIO_Initure.Pin=GPIO_PIN_5; //PA0
+    GPIO_Initure.Mode=GPIO_MODE_INPUT; //输入
+    GPIO_Initure.Pull=GPIO_PULLDOWN; //下拉
+    GPIO_Initure.Speed=GPIO_SPEED_HIGH; //高速
+    HAL_GPIO_Init(GPIOC,&GPIO_Initure);
     
     GPIO_Initure.Pin=GPIO_PIN_13; //PC13
     GPIO_Initure.Mode=GPIO_MODE_INPUT; //输入
@@ -48,16 +54,20 @@ u8 KEY_Scan(u8 mode)
     {
         key_up=1;    //支持连按
     }
-    if(key_up&&(KEY2==0||WK_UP==1))
+    if(key_up && (KEY0==0 || KEY1==0 || KEY2==0 || WK_UP==1))
     {
         delay_ms(10);
         key_up=0;
-        if(KEY2==0)  
+        if(KEY0==0)  
+            return KEY0_PRES;
+        else if(KEY1==0)  
+            return KEY1_PRES;
+        else if(KEY2==0)  
             return KEY2_PRES;
         else if(WK_UP==1) 
             return WKUP_PRES;          
     }
-    else if(KEY2==1&&WK_UP==0)
+    else if(KEY0==1 && KEY1==1 && KEY2==1 && WK_UP==0)
     {
         key_up=1;
     }
