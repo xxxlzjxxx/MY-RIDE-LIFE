@@ -188,9 +188,9 @@ u16 LCD_ReadPoint(u16 x,u16 y)
 	if(lcddev.id==0X9341||lcddev.id==0X6804||lcddev.id==0X5310||lcddev.id==0X1963)LCD_WR_REG(0X2E);//9341/6804/3510/1963 发送读GRAM指令
 	else if(lcddev.id==0X5510)LCD_WR_REG(0X2E00);	//5510 发送读GRAM指令
 	else LCD_WR_REG(0X22);      		 			//其他IC发送读GRAM指令
-	GPIOB->CRL=0X88888888; 							//PB0-7  上拉输入
-	GPIOB->CRH=0X88888888; 							//PB8-15 上拉输入
-	GPIOB->ODR=0XFFFF;     							//全部输出高
+	GPIOB->MODER=0; 							//PB  输入
+	GPIOB->PUPDR=0X55555555; 					//PB8-15 上拉
+	GPIOB->ODR=0XFFFF;     					//全部输出高
 
 	LCD_RS_SET;
 	LCD_CS_CLR;	    
@@ -202,8 +202,8 @@ u16 LCD_ReadPoint(u16 x,u16 y)
 	if(lcddev.id==0X1963)
 	{
 		LCD_CS_SET;
-		GPIOB->CRL=0X33333333; 		//PB0-7  上拉输出
-		GPIOB->CRH=0X33333333; 		//PB8-15 上拉输出
+		GPIOB->MODER=0X55555555; 		//PB0-7  上拉输出
+		GPIOB->PUPDR=0X55555555; 		//PB8-15 上拉输出
 		GPIOB->ODR=0XFFFF;    		//全部输出高  
 		return r;					//1963直接读就可以 
  	}
@@ -227,8 +227,8 @@ u16 LCD_ReadPoint(u16 x,u16 y)
 		r=DATAIN;//6804第二次读取的才是真实值 
 	}	 
 	LCD_CS_SET;
-	GPIOB->CRL=0X33333333; 		//PB0-7  上拉输出
-	GPIOB->CRH=0X33333333; 		//PB8-15 上拉输出
+    GPIOB->MODER=0X55555555; 		//PB0-7  上拉输出
+    GPIOB->PUPDR=0X55555555; 		//PB8-15 上拉输出
 	GPIOB->ODR=0XFFFF;    		//全部输出高  
 	if(lcddev.id==0X9325||lcddev.id==0X4535||lcddev.id==0X4531||lcddev.id==0X8989||lcddev.id==0XB505)return r;	//这几种IC直接返回颜色值
 	else if(lcddev.id==0X9341||lcddev.id==0X5310||lcddev.id==0X5510)return (((r>>11)<<11)|((g>>10)<<5)|(b>>11));//ILI9341/NT35310/NT35510需要公式转换一下
@@ -657,22 +657,25 @@ void LCD_Set_Window(u16 sx,u16 sy,u16 width,u16 height)
 void LCD_Init(void)
 { 
  	GPIO_InitTypeDef GPIO_InitStructure;
- 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOB|RCC_APB2Periph_AFIO, ENABLE); //使能PORTB,C时钟和AFIO时钟
-	GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable , ENABLE);//开启SWD，失能JTAG
+// 	RCC_APB2PeriphClockCmd(RCC_APB2Periph_GPIOC|RCC_APB2Periph_GPIOB|RCC_APB2Periph_AFIO, ENABLE); //使能PORTB,C时钟和AFIO时钟
+//	__HAL_RCC_GPIOA_CLK_ENABLE();           //使能GPIOA时钟
+    __HAL_RCC_GPIOB_CLK_ENABLE();           //使能GPIOB时钟
+    __HAL_RCC_GPIOC_CLK_ENABLE();           //使能GPIOV时钟
+//    GPIO_PinRemapConfig(GPIO_Remap_SWJ_JTAGDisable , ENABLE);//开启SWD，失能JTAG
 	
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_10|GPIO_Pin_9|GPIO_Pin_8|GPIO_Pin_7|GPIO_Pin_6;	   ///PORTC6~10复用推挽输出
-	GPIO_InitStructure.GPIO_Mode = GPIO_Mode_Out_PP;   
-	GPIO_InitStructure.GPIO_Speed = GPIO_Speed_50MHz;
-	GPIO_Init(GPIOC, &GPIO_InitStructure); //GPIOC	
+	GPIO_InitStructure.Pin = GPIO_PIN_10|GPIO_PIN_9|GPIO_PIN_8|GPIO_PIN_7|GPIO_PIN_6;	   ///PORTC6~10复用推挽输出
+	GPIO_InitStructure.Mode = GPIO_MODE_OUTPUT_PP;   
+	GPIO_InitStructure.Speed = GPIO_SPEED_FAST;
+	HAL_GPIO_Init(GPIOC,&GPIO_InitStructure);     //初始化	
 
-	GPIO_SetBits(GPIOC,GPIO_Pin_10|GPIO_Pin_9|GPIO_Pin_8|GPIO_Pin_7|GPIO_Pin_6);
+	HAL_GPIO_WritePin(GPIOC,GPIO_PIN_10|GPIO_PIN_9|GPIO_PIN_8|GPIO_PIN_7|GPIO_PIN_6,GPIO_PIN_SET);
 
-	GPIO_InitStructure.GPIO_Pin = GPIO_Pin_All;	//  PORTB推挽输出
-	GPIO_Init(GPIOB, &GPIO_InitStructure); //GPIOB
+	GPIO_InitStructure.Pin = GPIO_PIN_All;	//  PORTB推挽输出
+	HAL_GPIO_Init(GPIOB, &GPIO_InitStructure); //GPIOB
  
-	GPIO_SetBits(GPIOB,GPIO_Pin_All);
+	HAL_GPIO_WritePin(GPIOB,GPIO_PIN_All,GPIO_PIN_SET);
 
-delay_ms(50); // delay 50 ms 
+    delay_ms(50); // delay 50 ms 
 	LCD_WriteReg(0x0000,0x0001);
 	delay_ms(50); // delay 50 ms 
   	lcddev.id = LCD_ReadReg(0x0000);   

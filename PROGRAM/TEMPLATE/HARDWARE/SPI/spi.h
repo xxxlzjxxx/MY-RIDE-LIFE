@@ -7,14 +7,19 @@
 //SPI驱动代码	   
 //正点原子@ALIENTEK
 //技术论坛:www.openedv.com
-//创建日期:2016/16/16
-//版本：V1.0
+//创建日期:2016/1/16
+//版本：V1.1
 //版权所有，盗版必究。
 //Copyright(C) 广州市星翼电子科技有限公司 2014-2024
 //All rights reserved									  
 ////////////////////////////////////////////////////////////////////////////////// 	
 
-extern SPI_HandleTypeDef SPI1_Handler;  //SPI句柄
+//extern SPI_HandleTypeDef SPI5_Handler;  //SPI5句柄
+extern SPI_HandleTypeDef SPI1_Handler;  //SPI2句柄
+
+//void SPI5_Init(void);
+//void SPI5_SetSpeed(u8 SPI_BaudRatePrescaler);
+//u8 SPI5_ReadWriteByte(u8 TxData);
 
 void SPI1_Init(void);
 void SPI1_SetSpeed(u8 SPI_BaudRatePrescaler);

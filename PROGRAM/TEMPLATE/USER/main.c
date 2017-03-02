@@ -43,13 +43,17 @@
 #include "key.h"
 #include "usmart.h"
 #include "RTC.h"
+#include "usart3.h"	   
+#include "gps.h"
+#include "string.h"
+//#include "24l01.h"
 //#include "adc.h"
 //#include "dac.h"
-#include "lcd.h"
+//#include "lcd.h"
 //#include "font.h"
 //#include "pic.h"
 //#include "24cxx.h"
-#include "w25qxx.h"
+//#include "w25qxx.h"
 /** @addtogroup STM32L4xx_HAL_Examples
   * @{
   */
@@ -65,9 +69,11 @@
 /* Private function prototypes -----------------------------------------------*/
 void SystemClock_Config(u32 plln, u32 pllm, u32 pllr, u32 pllp,u32 pllq);
 
-//extern const unsigned char gImage_pic[61258];
-const u8 TEXT_Buffer[]={"NUCLEO-L476RG IIC TEST"};//要写入到24c02的字符串数组
-#define SIZE sizeof(TEXT_Buffer)
+u8 USART1_TX_BUF[USART3_MAX_RECV_LEN]; 					//串口1,发送缓存区
+nmea_msg gpsx; 											//GPS信息
+__align(4) u8 dtbuf[50];   								//打印缓存器
+const u8*fixmode_tbl[4]={"Fail","Fail"," 2D "," 3D "};	//fix mode字符串
+
 /**
   * @brief  Main program
   * @param  None
@@ -78,6 +84,11 @@ int main(void)
 //以下为RTC测试使用
     RTC_TimeTypeDef RTC_TimeStruct;
     RTC_DateTypeDef RTC_DateStruct;
+    //以下为GPS测试使用变量
+	u16 i,rxlen;
+	u16 lenx;
+	u8 key=0XFF;
+	u8 upload=0;    
 //    u8 tbuf[40];
 //    u16 adcx;
 //以下为DAC测试使用
@@ -89,37 +100,51 @@ int main(void)
 //    u8 x=0;
 //	u8 lcd_id[12];
 //以下为EEPROM测试使用
-    u8 key;
-	u16 i=0;
-	u8 datatemp[SIZE];
-    u32 nFLASH_SIZE;
+//    u8 key;
+//	u16 i=0;
+//	u8 datatemp[SIZE];
+//    u32 nFLASH_SIZE;
+    //以下为测试NRF24L01使用变量
+//    u8 key,mode;
+//	u16 t=0;			 
+//	u8 tmp_buf[33];
 //**********************************************************************************
     HAL_Init(); //初始化 HAL 库
   /* Configure the System clock to have a frequency of 40 MHz */
-    SystemClock_Config(1, 20, 4, 7, 2);
-    delay_init(40);                //初始化延时函数
-//    TFT24_Init();                     //初始化LCD
+//    SystemClock_Config(1, 10, 4, 7, 2);       //80MHz
+    SystemClock_Config(1, 10, 4, 7, 2);       //40MHz
+    delay_init(80);                //初始化延时函数
+
     uart_init(115200);              //初始化USART
+    USART2_init(38400);
     printf(">>system reset.\r\n");
     usmart_dev.init(40); 		    //初始化USMART
     LED_Init();                     //初始化LED
-    KEY_Init();                     //初始化按键   
-//    MY_ADC_Init();                  //初始化ADC1通道9  
+    KEY_Init();                     //初始化按键
+//    LCD_Init();                     //初始化LCD
+    
     RTC_Init();                     //初始化RTC 
     RTC_Set_WakeUp(RTC_WAKEUPCLOCK_CK_SPRE_16BITS,0); //配置WAKE UP中断,1秒钟中断一次 
 //    AT24CXX_Init();				    //初始化IIC
-    W25QXX_Init();				    //W25QXX初始化
-    
-//    POINT_COLOR=RED; 
-//	sprintf((char*)lcd_id,"LCD ID:%04X",lcddev.id);//将LCD ID打印到lcd_id数组。    
-	while(W25QXX_ReadID()!=W25Q128)//检测不到
+//    W25QXX_Init();				    //W25QXX初始化
+//     NRF24L01_Init();    		    //初始化NRF24L01   
+
+	if(Ublox_Cfg_Rate(1000,1)!=0)	//设置定位信息更新速度为1000ms,顺便判断GPS模块是否在位. 
 	{
-		printf(">>Check Failed!   please check!\r\n");
-		delay_ms(500);
-		LED1_Toggle;//DS0闪烁
+   		printf("NEO-6M Setting.........     ");
+		while((Ublox_Cfg_Rate(1000,1)!=0)&&key)	//持续判断,直到可以检查到NEO-6M,且数据保存成功
+		{
+			USART3_Init(9600);				//初始化串口2波特率为9600(EEPROM没有保存数据的时候,波特率为9600.)
+	  		Ublox_Cfg_Prt(38400);			//重新设置模块的波特率为38400
+			USART3_Init(38400);				//初始化串口2波特率为38400 
+			Ublox_Cfg_Tp(1000000,100000,1);	//设置PPS为1秒钟输出1次,脉冲宽度为100ms	    
+			key=Ublox_Cfg_Cfg_Save();		//保存配置  
+		}	  					 
+	   	printf("NEO-6M Set Done!!\r\n");
+		delay_ms(500); 
 	}
+
     printf(">>ready!\r\n");
-    nFLASH_SIZE=32*1024*1024;	//FLASH 大小为32M字节
     while(1)
     {
         HAL_RTC_GetTime(&RTC_Handler,&RTC_TimeStruct,RTC_FORMAT_BIN);
@@ -127,34 +152,32 @@ int main(void)
         HAL_RTC_GetDate(&RTC_Handler,&RTC_DateStruct,RTC_FORMAT_BIN);
         printf("Date:20%02d-%02d-%02d ",RTC_DateStruct.Year,RTC_DateStruct.Month,RTC_DateStruct.Date); 	
         printf("Week:%d  \r\n" ,RTC_DateStruct.WeekDay);
-        
+
+		delay_ms(1);
+		if(USART3_RX_STA & 0X8000)		//接收到一次数据了
+		{
+			rxlen=USART3_RX_STA&0X7FFF;	//得到数据长度
+			for(i=0;i<rxlen;i++)
+                USART1_TX_BUF[i]=USART3_RX_BUF[i];	   
+ 			USART3_RX_STA=0;		   	//启动下一次接收
+			USART1_TX_BUF[i]=0;			//自动添加结束符
+			GPS_Analysis(&gpsx,(u8*)USART1_TX_BUF);//分析字符串
+			Gps_Msg_Show();				//显示信息	
+			if(upload)
+                printf("\r\n%s\r\n",USART1_TX_BUF);//发送接收到的数据到串口1
+ 		}
 		key=KEY_Scan(0);
-		if(key==KEY1_PRES)//KEY1按下,写入24C02
-		{    
-			printf("Start Write ....");
-//			AT24CXX_Write(0,(u8*)TEXT_Buffer,SIZE);
-            W25QXX_Write((u8*)TEXT_Buffer,nFLASH_SIZE-100,SIZE);		//从倒数第100个地址处开始,写入SIZE长度的数据
-			printf("Write Finished!");//提示传送完成
-		}
-		if(key==KEY0_PRES)//KEY0按下,读取字符串并显示
+		if(key==KEY0_PRES)
 		{
-			printf("Start Read .... ");
-//			AT24CXX_Read(0,datatemp,SIZE);
-            W25QXX_Read(datatemp,nFLASH_SIZE-100,SIZE);					//从倒数第100个地址处开始,读出SIZE个字节
-			printf("The Data Readed Is:  ");//提示传送完成
-			//LCD_ShowString(30,190,200,16,16,datatemp);//显示读到的字符串
-            for(i = 0; i < SIZE; i++)
-            {
-                printf("%c", datatemp[i]);
-            }
-		}
-		i++;
-		delay_ms(10);
-		if(i==20)
-		{
-			LED0_Toggle;//提示系统正在运行	
-			i=0;
-		}
+			upload=!upload;
+			if(upload)
+                printf("NMEA Data Upload:ON     \r\n");
+			else 
+                printf("NMEA Data Upload:OFF   \r\n");
+ 		}
+		if((lenx%500)==0)
+            LED0_Toggle; 	    				 
+		lenx++;
 	}  
 } 
 /**

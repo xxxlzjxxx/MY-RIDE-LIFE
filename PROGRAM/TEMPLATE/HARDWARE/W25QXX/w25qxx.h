@@ -30,7 +30,9 @@
 
 extern u16 W25QXX_TYPE;					//定义W25QXX芯片型号		   
 
-#define	W25QXX_CS 		PAout(2)  		//W25QXX的片选信号
+//#define	W25QXX_CS 		PAout(2)  		//W25QXX的片选信号
+#define	W25QXX_CS_H 		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_SET); 		//W25QXX的片选信号
+#define	W25QXX_CS_L 		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_2,GPIO_PIN_RESET); 		//W25QXX的片选信号
 
 ////////////////////////////////////////////////////////////////////////////////// 
 //指令表
