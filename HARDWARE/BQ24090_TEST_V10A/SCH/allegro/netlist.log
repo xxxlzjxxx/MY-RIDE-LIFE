@@ -1,0 +1,15 @@
+{ Using PSTWRITER 16.6.0 d001Aug-31-2017 at 16:18:02 }
+
+#1 WARNING(ORCAP-36038): "No_connect" property on Pin "U1.9" ignored for U1: SCHEMATIC1, 02 BQ24090 (205.74, 45.72). Connecting pin to net "N16796255".
+#2 WARNING(ORCAP-36038): "No_connect" property on Pin "U3.9" ignored for U3: SCHEMATIC1, 02 BQ24090 (205.74, 129.54). Connecting pin to net "N16797325".
+#3 WARNING(ORCAP-36006): Part Name "HEAT-37X25X20_HEAT-37X25X20_HEAT-37X25X20" is renamed to "HEAT-37X25X20_HEAT-37X25X20_HEA".
+INFO(ORCAP-36080): Scanning netlist files ...
+
+Loading... H:\GITHUB\MY-RIDE-LIFE\HARDWARE\BQ24090_TEST_V10A\SCH\ALLEGRO/pstchip.dat
+
+Loading... H:\GITHUB\MY-RIDE-LIFE\HARDWARE\BQ24090_TEST_V10A\SCH\ALLEGRO/pstchip.dat
+
+Loading... H:\GITHUB\MY-RIDE-LIFE\HARDWARE\BQ24090_TEST_V10A\SCH\ALLEGRO/pstxprt.dat
+
+Loading... H:\GITHUB\MY-RIDE-LIFE\HARDWARE\BQ24090_TEST_V10A\SCH\ALLEGRO/pstxnet.dat
+packaging the design view...

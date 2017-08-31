@@ -335,7 +335,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32L476xx</Define>
               <Undefine></Undefine>
-              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\KEY;..\HARDWARE\LED;..\HARDWARE\EXTI;..\HARDWARE\TIMER;..\USMART;..\HARDWARE\RTC;..\HARDWARE\ADC;..\HARDWARE\DAC;..\HARDWARE\IIC;..\HARDWARE\SPI;..\HARDWARE\GPS;..\HARDWARE\USART3</IncludePath>
+              <IncludePath>..\CORE;..\OBJ;..\USER;..\HALLIB\Inc;..\SYSTEM\delay;..\SYSTEM\sys;..\SYSTEM\usart;..\HARDWARE\KEY;..\HARDWARE\LED;..\HARDWARE\EXTI;..\HARDWARE\TIMER;..\USMART;..\HARDWARE\RTC;..\HARDWARE\ADC;..\HARDWARE\DAC;..\HARDWARE\IIC;..\HARDWARE\SPI;..\HARDWARE\GPS;..\HARDWARE\USART3;..\HARDWARE\24CXX</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -475,64 +475,14 @@
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_adc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l4xx_hal_can.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_can.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_comp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_comp.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32l4xx_hal_cortex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_cortex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l4xx_hal_crc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_crc.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_crc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_crc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_cryp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_cryp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_cryp_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_cryp_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_dac.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dac_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_dac_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_dfsdm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_dfsdm.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32l4xx_hal_dma.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_dma.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_firewall.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_firewall.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_flash.c</FileName>
@@ -550,94 +500,9 @@
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_flash_ramfunc.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l4xx_hal_hcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_hcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_i2c.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_i2c.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_i2c_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_i2c_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_irda.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_irda.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_iwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_iwdg.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_lcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_lptim.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_lptim.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_nand.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_nand.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_nor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_nor.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_opamp.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_opamp.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_opamp_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_opamp_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_pcd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pcd_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_pcd_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pwr.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_pwr.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_pwr_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_pwr_ex.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32l4xx_hal_qspi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_qspi.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rcc_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_rcc_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_rng.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_rng.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_rtc.c</FileName>
@@ -650,31 +515,6 @@
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_rtc_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l4xx_hal_sai.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_sai.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_sd.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smartcard.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_smartcard.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smartcard_ex.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_smartcard_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_smbus.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_smbus.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32l4xx_hal_spi.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_spi.c</FilePath>
@@ -683,16 +523,6 @@
               <FileName>stm32l4xx_hal_spi_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_spi_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_sram.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_sram.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_swpmi.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_swpmi.c</FilePath>
             </File>
             <File>
               <FileName>stm32l4xx_hal_tim.c</FileName>
@@ -705,19 +535,9 @@
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_tim_ex.c</FilePath>
             </File>
             <File>
-              <FileName>stm32l4xx_hal_tsc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_tsc.c</FilePath>
-            </File>
-            <File>
               <FileName>stm32l4xx_hal_uart_ex.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HALLIB\Src\stm32l4xx_hal_uart_ex.c</FilePath>
-            </File>
-            <File>
-              <FileName>stm32l4xx_hal_wwdg.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HALLIB\Src\stm32l4xx_hal_wwdg.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -775,11 +595,6 @@
               <FilePath>..\HARDWARE\ADC\adc.c</FilePath>
             </File>
             <File>
-              <FileName>dac.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\DAC\dac.c</FilePath>
-            </File>
-            <File>
               <FileName>myiic.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\HARDWARE\IIC\myiic.c</FilePath>
@@ -790,14 +605,9 @@
               <FilePath>..\HARDWARE\SPI\spi.c</FilePath>
             </File>
             <File>
-              <FileName>gps.c</FileName>
+              <FileName>24cxx.c</FileName>
               <FileType>1</FileType>
-              <FilePath>..\HARDWARE\GPS\gps.c</FilePath>
-            </File>
-            <File>
-              <FileName>usart3.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\HARDWARE\USART3\usart3.c</FilePath>
+              <FilePath>..\HARDWARE\24CXX\24cxx.c</FilePath>
             </File>
           </Files>
         </Group>
