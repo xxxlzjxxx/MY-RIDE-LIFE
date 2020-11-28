@@ -119,12 +119,15 @@
     (FileView
       (Path "Design Resources")
       (Path "Design Resources"
-         "e:\github\my-ride-life\hardware\mb1136_boostpack_v10a\sch\mb1136_boostpack_v10a.dsn")
+         "H:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn")
       (Path "Design Resources"
-         "e:\github\my-ride-life\hardware\mb1136_boostpack_v10a\sch\mb1136_boostpack_v10a.dsn"
+         "H:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn"
          "SCHEMATIC1")
       (Path "Design Resources" "Library")
-      (Path "Outputs"))
+      (Path "Outputs")
+      (Select "Design Resources"
+         "H:\GitHub\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\mb1136_boostpack_v10a.dsn"
+         "SCHEMATIC1" "03 BOOSTPACK"))
     (HierarchyView)
     (Doc
       (Type "COrCapturePMDoc")
@@ -134,15 +137,15 @@
     (Doc
       (Type "COrSchematicDoc")
       (Frame
-        (Placement "44 0 1 -1 -1 -8 -31 52 743 52 623")
-        (Scroll "2452 1054")
-        (Zoom "220")
+        (Placement "44 0 1 -1 -1 -8 -31 234 1581 234 823")
+        (Scroll "0 0")
+        (Zoom "100")
         (Occurrence "/"))
       (Path
-         "E:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
+         "H:\GITHUB\MY-RIDE-LIFE\HARDWARE\MB1136_BOOSTPACK_V10A\SCH\MB1136_BOOSTPACK_V10A.DSN")
       (Schematic "SCHEMATIC1")
       (Page "03 BOOSTPACK")))
-  (MPSSessionName "HUIYUAN-LZJ")
+  (MPSSessionName "Administrator")
   (PartMRUSelector
     (OFFPAGELEFT-L
       (LibraryName "D:\CADENCE\SPB_16.6\TOOLS\CAPTURE\LIBRARY\CAPSYM.OLB")
